@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 31, 2016 at 06:37 PM
+-- Generation Time: Jun 01, 2016 at 04:25 PM
 -- Server version: 5.5.46-0ubuntu0.14.04.2
 -- PHP Version: 5.5.9-1ubuntu4.13
 
@@ -28,11 +28,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `ASSISTANCE` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `description` varchar(500) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `description` varchar(1500) NOT NULL,
   `highlight_flag` char(1) DEFAULT 'N',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `ASSISTANCE`
+--
+
+INSERT INTO `ASSISTANCE` (`id`, `name`, `description`, `highlight_flag`) VALUES
+(1, 'Abroad with TIM', 'Using your mobile phone abroad is easy! \r\nAll TIM customers with a rechargeable line and a subscription are automatically enabled to call, receive calls, send and receive SMS from abroad. And it is as easy as in Italy!', 'Y'),
+(2, 'Fast charging from the site tim.it', 'The service from Fast Reload tim.it site  lets you charge your phone without the need to register: \r\nsimply enter your information, and in  3 clicks your line is recharged!\r\n\r\nThe charging cuts start at a minimum of € 6 a up to 150 €. you will be some simple information such as:\r\nTIM number to recharge.\r\nan email address to which you send the notification operation performed.\r\nthe data of your credit card or PayPal.\r\nThey accept major credit cards issued in Italy belonging to the Visa, Mastercard (including Carta, Postepay, Clarima and Bankamericard Deutsche Credit Card), American Express, Diners Card and Aura.\r\n\r\nNB Please note that if you choose charging 6 € you will have € 5 credit and 500 MMS to be sent to all within 30 days. For full details on Reload + click here .', 'N'),
+(3, 'TIM SMART', 'To you who want to surf unlimited high-speed anytime, anywhere, TIM offers the solution  TIM SMART  to be always connected, at home and outside the home.\n\nBy TIM SMART HOUSE you:\n\nUnlimited ADSL up to 20 Mbps \nTIMVision included\nunlimited calls to fixed and mobile, with no connection fee .\n\nBy  TIM SMART MOBILE  you:\n\nUnlimited ADSL up to 20 Mbps \nTIMVision included\nA SIM card with 500 minutes to all Internet 2GB 4G to your Smartphone and international calls from 1 cent per minute.\n\nEverything about your home bill: a single price to satisfy needs of the whole family.\nAlso you can ask so many options to enrich your TIM SMART.\n\nTIM to your SMART HOUSE you can add:\n\nOPTION SMART MOBILE Smartphone:\na SIM with 500 minutes to all Internet 2GB 4G to your Smartphone and international calls from 1 cent per minute.\nINTERNATIONAL VOICE from home:\nunlimited calls to landlines in the US, Canada and Western Europe.\n\nTo check if the offer is active and the availability of the services included calls for free Customer Service 187 or go to the section  Fixed MyTIM .\nTIM to your SMART MOBILE you can add:\n\nSIM PLUS Smartphone: \nA SIM card with 500 minutes to all Internet 2GB 4G to your Smartphone and international calls from 1 cent per minute.\nSIM PLUS 4G for PC and Tablet:\nInternet 4G 4GB per month.', 'Y'),
+(4, 'Recess', 'To be able to use the right to reconsider the inherent requirements of:\n\nACTIVATE NEW LINE\nPASSAGE TO ANOTHER OPERATOR\nACTIVATION OFFER / SERVICE ON LINE ALREADY ''TIM\nPURCHASE / HIRE OF PRODUCTS\nYou can contact customer service 187 or download directly from this site in the form to the written application ', 'N'),
+(5, 'Value-added services: SMS / MMS / Internet', 'The value-added services, also called ''premium'' or ''content'', are also part of the services provided by external companies through SMS, MMS or data connection from a landline (WEB) or mobile (WAP) that you can activate, receive and / or make use of phone, tablet or PC.  \r\nThese are services such as: logos, ringtones, horoscopes, weather, news, videos, wallpapers and more.\r\nThe TIM Card, since its activation, is empowered to make / receive calls and video calls, send and receive SMS / MMS, browsing the internet, therefore, you can also activate the value added services (with the exception of TIM Card registered in the name minor for which to ''Adult; content services are disabled). activation of the service can take place following the activation procedure for each of the channels mentioned above (SMS, MMS, WEB, WAP etc.), but only ever with your consent.\r\nValue-added services are chargeable and charging arrangements (for each message and / or content, daily, weekly, monthly) vary depending on the type of service you have chosen to activate on your line. When you download content is therefore always important to verify if this means adherence to a subscription service with periodic debit your users.', 'N'),
+(6, 'Check the remaining credit while abroad', 'When you''re abroad, you can check the remaining credit of your rechargeable TIM through the following ways:\r\n\r\nIf the local operator supports the service of Direct Call , you can call 40916 even if you''re at zero credit.\r\nIf you still have remaining credit you can use the service 40916 via SMS by sending a free message to 40916 with the syntax '' CREDIT ''.\r\nDirectly from online pc entering the section MyTIM Mobile .\r\nBy phone on site TIM.it optimized for your smartphone, or via the '' App MyTIM Mobile , currently available for free download in versions for iPhone and smartphones with Android operating system . If you want to know what it costs to surf the Internet when you''re abroad, you can see the shipping costs on the Internet with their cell phone or with the PC . In this case, in fact, for the display of information, you will support the costs and conditions normally applied to data roaming.\r\nFinally from abroad, you can check your own credit by typing * 123 # followed by ENTER when the local manager allows this service. After a few moments appear the amount of your remaining credit directly on the phone''s display.', 'Y'),
+(7, 'Charging +', 'Reload + it allows you, for each operation of charging by € 6 or € 12  to get in addition to telephone traffic, a bundle MMS valid for all, to be consumed within 30 days after the charge.\n\nFrom 02.03.2014 the new offer Reload + is enriched with new cuts Reload!\n\nReload + € 17\n\nReload + € 22\n\nConfirmation of the bundle activation Reloading you will be notified via SMS\n\nFor more details and information click here .', 'N');
 
 -- --------------------------------------------------------
 
@@ -97,7 +110,56 @@ CREATE TABLE IF NOT EXISTS `DEV_ASSISTANCE` (
   PRIMARY KEY (`id`),
   KEY `id_dev` (`id_dev`),
   KEY `id_assistance` (`id_assistance`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
+
+--
+-- Dumping data for table `DEV_ASSISTANCE`
+--
+
+INSERT INTO `DEV_ASSISTANCE` (`id`, `id_dev`, `id_assistance`) VALUES
+(1, 11, 2),
+(2, 12, 2),
+(3, 13, 2),
+(4, 14, 2),
+(5, 15, 2),
+(6, 16, 2),
+(7, 17, 2),
+(8, 18, 2),
+(9, 19, 2),
+(10, 20, 2),
+(11, 21, 2),
+(27, 2, 3),
+(28, 2, 3),
+(29, 4, 3),
+(30, 8, 3),
+(31, 11, 3),
+(32, 12, 3),
+(33, 13, 3),
+(34, 14, 3),
+(35, 15, 3),
+(36, 16, 3),
+(37, 17, 3),
+(38, 18, 3),
+(39, 19, 3),
+(40, 20, 3),
+(41, 21, 3),
+(42, 12, 4),
+(43, 15, 4),
+(44, 17, 4),
+(45, 18, 4),
+(46, 6, 4),
+(47, 7, 4),
+(48, 8, 4),
+(49, 9, 4),
+(50, 12, 5),
+(51, 14, 5),
+(52, 15, 5),
+(53, 17, 5),
+(54, 18, 5),
+(55, 11, 7),
+(56, 2, 7),
+(57, 13, 7),
+(58, 4, 7);
 
 -- --------------------------------------------------------
 
@@ -112,7 +174,36 @@ CREATE TABLE IF NOT EXISTS `DEV_SL` (
   PRIMARY KEY (`id`),
   KEY `id_dev` (`id_dev`),
   KEY `id_sl` (`id_sl`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+
+--
+-- Dumping data for table `DEV_SL`
+--
+
+INSERT INTO `DEV_SL` (`id`, `id_dev`, `id_sl`) VALUES
+(1, 5, 7),
+(2, 7, 4),
+(3, 7, 7),
+(4, 9, 4),
+(5, 9, 7),
+(6, 2, 6),
+(7, 3, 6),
+(8, 4, 6),
+(9, 2, 5),
+(10, 3, 5),
+(11, 4, 5),
+(12, 8, 3),
+(13, 8, 1),
+(14, 10, 1),
+(15, 10, 2),
+(16, 12, 5),
+(17, 15, 5),
+(18, 14, 5),
+(19, 21, 5),
+(20, 12, 6),
+(21, 15, 6),
+(22, 14, 6),
+(23, 21, 6);
 
 -- --------------------------------------------------------
 
