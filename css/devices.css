@@ -2,3 +2,11 @@
 	padding: 10px 0px 0px 0px;
 }
 
+.caption h4, p{
+	text-align: center;
+
+}
+
+.panel-body div > p{
+	text-align: justify;
+}
