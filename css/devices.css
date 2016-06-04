@@ -10,3 +10,7 @@
 .panel-body div > p{
 	text-align: justify;
 }
+
+.thumbnail .img-responsive{
+	height: 200px;
+}
