@@ -3,7 +3,6 @@
 $response=array();
 if(isset($_GET["id"])){
 	$id = $_GET["id"];
-
 	$con= mysqli_connect("localhost","root","","hyptelecom");
 
 	$result = mysqli_query($con,"select * from DEVICE where id='".$id."'") or die(mysql_error());
@@ -12,6 +11,7 @@ if(isset($_GET["id"])){
 		$response["device"] = array();
 		$response["message"] = "Device found!";
 		$response["success"] = 1;
+		
 
 		while($row = mysqli_fetch_array($result)){
 
@@ -36,7 +36,6 @@ if(isset($_GET["id"])){
 
 			$sl_services_result = mysqli_query($con,"select SL.id,name,image_path from SL_SERVICE SL inner join DEV_SL DEVSL on SL.id=DEVSL.id_sl where DEVSL.id_dev='".$id."'") or die(mysql_error());
 
-
 			if(mysqli_num_rows($sl_services_result) > 0){
 
 				$response["success"] = 1;
@@ -48,13 +47,14 @@ if(isset($_GET["id"])){
 					$sl_entry["id"] = $sl_service_row["id"];
 					$sl_entry["name"] = $sl_service_row["name"];
 				    $sl_entry["image_path"] = $sl_service_row["image_path"];
-					// echo json_encode($sl_entry)."<br/>";
+					
 					array_push($entry["sl_services"], $sl_entry);
+					
 
 				}
 			}
 			else{
-				$response["success"] = 1;
+				$response["success"] = 0;
 				$response["message"] = "SL services not found!";
 			}
 
@@ -70,19 +70,20 @@ if(isset($_GET["id"])){
 						$assistance_entry = array();
 						$assistance_entry["id"] = $assistances_row["id"];
 						$assistance_entry["name"] = $assistances_row["name"];
-						// echo json_encode($assistance_entry)."<br/>";
+						
 						array_push($entry["assistances"], $assistance_entry);
+						
 
 					}
 					
 				}
 				else{
-					$response["success"] = 1;
+					$response["success"] = 0;
 					$response["message"] = "Assistance services not found!";
 				}
 
-			// echo json_encode($response);
 			array_push($response["device"],$entry);
+			// echo json_encode($response["device"]).'<br/>';
 		}
 
 	}
