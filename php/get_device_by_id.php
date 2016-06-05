@@ -23,6 +23,7 @@ if(isset($_GET["id"])){
 			$entry["description"] = $row["description"];
 			$entry["cpu"] = $row["cpu"];
 			$entry["os"] = $row["os"];
+			$entry["resolution"] = $row["resolution"];
 			$entry["display_type"] = $row["display_type"];
 			$entry["display_size"] = $row["display_size"];
 			$entry["sim"] = $row["sim"];
@@ -33,7 +34,7 @@ if(isset($_GET["id"])){
 			$entry["sl_services"] = array();
 			$entry["assistances"] = array();
 
-			$sl_services_result = mysqli_query($con,"select SL.id,name from SL_SERVICE SL inner join DEV_SL DEVSL on SL.id=DEVSL.id_sl where DEVSL.id_dev='".$id."'") or die(mysql_error());
+			$sl_services_result = mysqli_query($con,"select SL.id,name,image_path from SL_SERVICE SL inner join DEV_SL DEVSL on SL.id=DEVSL.id_sl where DEVSL.id_dev='".$id."'") or die(mysql_error());
 
 
 			if(mysqli_num_rows($sl_services_result) > 0){
@@ -46,18 +47,23 @@ if(isset($_GET["id"])){
 					$sl_entry = array();
 					$sl_entry["id"] = $sl_service_row["id"];
 					$sl_entry["name"] = $sl_service_row["name"];
-					// $sl_entry["image_path"] = $sl_service_row["image_path"]; HAVE TO ADD IMG PATH IN DB
+				    $sl_entry["image_path"] = $sl_service_row["image_path"];
 					// echo json_encode($sl_entry)."<br/>";
 					array_push($entry["sl_services"], $sl_entry);
 
 				}
+			}
+			else{
+				$response["success"] = 1;
+				$response["message"] = "SL services not found!";
+			}
 
-				$assistances_result = mysqli_query($con,"select ASS.id,name from ASSISTANCE ASS inner join DEV_ASSISTANCE DEVAS on ASS.id=DEVAS.id_assistance where DEVAS.id_dev='".$id."'") or die(mysql_error());
+			$assistances_result = mysqli_query($con,"select ASS.id,name from ASSISTANCE ASS inner join DEV_ASSISTANCE DEVAS on ASS.id=DEVAS.id_assistance where DEVAS.id_dev='".$id."'") or die(mysql_error());
 
 				if(mysqli_num_rows($assistances_result) > 0){
 
 					$response["success"] = 1;
-					$response["message"] = "Assistances, SL serivices and Device found!";
+					$response["message"] = "Assistances and Device found!";
 
 					while ($assistances_row = mysqli_fetch_array($assistances_result)) {
 						
@@ -71,16 +77,11 @@ if(isset($_GET["id"])){
 					
 				}
 				else{
-					$response["success"] = 0;
+					$response["success"] = 1;
 					$response["message"] = "Assistance services not found!";
 				}
-				
-			}
-			else{
-				$response["success"] = 0;
-				$response["message"] = "SL services not found!";
-			}
-			echo json_encode($response);
+
+			// echo json_encode($response);
 			array_push($response["device"],$entry);
 		}
 
