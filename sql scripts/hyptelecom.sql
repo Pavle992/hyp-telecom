@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2016 at 10:43 PM
+-- Generation Time: Jun 10, 2016 at 10:22 AM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -207,6 +207,72 @@ INSERT INTO `dev_sl` (`id`, `id_dev`, `id_sl`) VALUES
 (21, 15, 6),
 (22, 14, 6),
 (23, 21, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `homepage`
+--
+
+DROP TABLE IF EXISTS `homepage`;
+CREATE TABLE IF NOT EXISTS `homepage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_desc` varchar(500) DEFAULT NULL,
+  `group_path` varchar(50) DEFAULT NULL,
+  `gover_desc` varchar(500) DEFAULT NULL,
+  `gover_path` varchar(50) DEFAULT NULL,
+  `bm_desc` varchar(500) DEFAULT NULL,
+  `bm_path` varchar(50) DEFAULT NULL,
+  `inovation` varchar(500) DEFAULT NULL,
+  `testimonials` varchar(200) DEFAULT NULL,
+  `projects` varchar(500) DEFAULT NULL,
+  `fi_desc` varchar(500) DEFAULT NULL,
+  `fi_path` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `homepage`
+--
+
+INSERT INTO `homepage` (`id`, `group_desc`, `group_path`, `gover_desc`, `gover_path`, `bm_desc`, `bm_path`, `inovation`, `testimonials`, `projects`, `fi_desc`, `fi_path`) VALUES
+(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium molestie commodo. Pellentesque lectus dui, dictum vel nisi vitae, mollis maximus mauris. Nullam a luctus nibh, sit amet condimentum felis. Phasellus vitae velit orci. Vestibulum faucibus purus est, quis faucibus libero posuere eget.', '../img/home/group.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium molestie commodo. Pellentesque lectus dui, dictum vel nisi vitae, mollis maximus mauris. Nullam a luctus nibh, sit amet condimentum felis. Phasellus vitae velit orci. Vestibulum faucibus purus est, quis faucibus libero posuere eget.', '../img/home/governance.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium molestie commodo. Pellentesque lectus dui, dictum vel nisi vitae, mollis maximus mauris. Nullam a luctus nibh, sit amet condimentum felis. Phasellus vitae velit orci. Vestibulum faucibus purus est, quis faucibus libero posuere eget.', '../img/home/business.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium molestie commodo. Pellentesque lectus dui, dictum vel nisi vitae, mollis maximus mauris. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium molestie commodo. Pellentesque lectus dui, dictum vel nisi vitae, mollis maximus mauris. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium molestie commodo. Pellentesque lectus dui, dictum vel nisi vitae, mollis maximus mauris. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium molestie commodo. Pellentesque lectus dui, dictum vel nisi vitae, mollis maximus mauris. Nullam a luctus nibh, sit amet condimentum felis. Phasellus vitae velit orci. Vestibulum faucibus purus est, quis faucibus libero posuere eget.', '../img/home/investors.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `locations`
+--
+
+DROP TABLE IF EXISTS `locations`;
+CREATE TABLE IF NOT EXISTS `locations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lat` float(11,7) DEFAULT NULL,
+  `lon` float(11,7) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `description`) VALUES
+(1, 'MILISKOUUU!!'),
+(2, 'MILISKOUUU!!Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp'),
+(3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp');
 
 -- --------------------------------------------------------
 
