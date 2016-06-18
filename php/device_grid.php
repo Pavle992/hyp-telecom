@@ -19,8 +19,8 @@ class DeviceGrid {
 	public function getDeviceByCategory($cat, $prom = 0) {
 		$this->db->connect();
 
-		if ($prom) $sql = "SELECT name, price, image_path  FROM device WHERE device_type='$cat' AND promotion = 1";
-		else $sql = "SELECT name, price, image_path  FROM device WHERE device_type='$cat'";
+		if ($prom) $sql = "SELECT name, price, image_path  FROM DEVICE WHERE device_type='$cat' AND promotion = 1";
+		else $sql = "SELECT name, price, image_path  FROM DEVICE WHERE device_type='$cat'";
 
 		
 		$result = $this->db->con->query($sql);
@@ -45,8 +45,8 @@ class DeviceGrid {
 	public function getAllDevices($prom = 0) {
 		$this->db->connect();
 
-		if ($prom) $sql = "SELECT name, price, image_path  FROM device WHERE promotion = 1";
-		else $sql = "SELECT name, price, image_path  FROM device";
+		if ($prom) $sql = "SELECT name, price, image_path  FROM DEVICE WHERE promotion = 1";
+		else $sql = "SELECT name, price, image_path  FROM DEVICE";
 		$result = $this->db->con->query($sql);
 
 		$resultArray = array();

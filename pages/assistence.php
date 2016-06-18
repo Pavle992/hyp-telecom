@@ -42,16 +42,11 @@
             <div class="container">
 
                 <!-- Path -->
-                <div class="row">
-                    <div class="col-lg-12 pad-top">
-                        <a href="#">Home</a>
-                        
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-
-                        <a href="#">Assistence</a>
-
-                    </div>
-                </div>
+                <ol class="breadcrumb path">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Assistence</li>
+                    
+                </ol>
 
                 <!-- Main body -->
                 <div class="row">

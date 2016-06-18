@@ -2,6 +2,9 @@ $(document).ready(function(){
     
 	getAssistence(1,1,1,0);
 
+	$("ul.nav li:nth-child(4)").attr('class', 'active');
+	$("ul.nav li:nth-child(1)").removeClass('active');
+
 });
 
 function handleAllClick(cb) {
@@ -70,7 +73,7 @@ function getAssistence(phone, tablet, smart, prom) {
       	 var insertString = "";
 
       	 $.each(devices, function (i, device) {
-      	 	 var insertBox = '<div class="col-lg-3 col-lg-offset-1 device-block"><div class="text-center"><h4>' + device.name + '</h4></div><div class="text-center"><button class="btn btn-primary" type="submit">Details</button></div></div>';
+      	 	 var insertBox = '<div class="col-lg-3 col-lg-offset-1 device-block"><div class="text-center"><h4>' + device.name + '</h4></div><div class="text-center"><form action="../pages/assistence_single.php" methode="get"><input type="hidden" name="id" value=' + device.id +' ><button class="btn btn-primary" type="submit">Details</button></form></div></div>';
       	 	 if (i == 0)  {
       	 	 	insertString+='<div class="row">';
       	 	 	insertString+=insertBox;
