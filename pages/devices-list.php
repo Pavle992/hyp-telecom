@@ -9,6 +9,8 @@
     <!-- Bootstrap -->
     <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="css/index.css" rel="stylesheet"> -->
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <link href="../css/devices-list.css" rel="stylesheet">
     
 	<!-- Thumbnail gallery responsive -->
@@ -43,7 +45,7 @@
 
                 <!-- Path -->
                 <ol class="breadcrumb path">
-                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./home.php">Home</a></li>
                     <li class="active">Devices</li>
                 </ol>
 
@@ -113,8 +115,11 @@
         </div>
     </div>
           
-            <!-- EOF PAGE -->
-
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Telecom 2016</p>
+        </div>
+    </footer>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 

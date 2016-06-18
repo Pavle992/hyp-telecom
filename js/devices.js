@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  $(".active:first").removeClass('active');
+  $("#nav-devices").addClass('active');
+
 
   function fill_device_information(device){
 
@@ -30,7 +33,7 @@ $(document).ready(function(){
 
 function create_assistance_item(assistance){
 
-    var assitance_item = ('<button type="button" class="list-group-item">'+assistance.name+'</button>');
+    var assitance_item = ('<button type="button" class="list-group-item"><a href="./assistence_single.php?id='+assistance.id+'">'+assistance.name+'</a></button>');
     return assitance_item;
 
   };

@@ -67,7 +67,7 @@
 
                 <!-- Path -->
                 <ol class="breadcrumb path">
-                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./home.php">Home</a></li>
                     <li><a href="./assistence.php">Assistence</a></li>
                     <li class="active"> <?php echo $row['name']; ?> </li>
                 </ol>
