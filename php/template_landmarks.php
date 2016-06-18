@@ -15,7 +15,7 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" id="page-header">
                     <li class="active"><a href="./home.html">Home</a>
                     </li>
                     <li><a href="./devices-list.php">Devices</a>

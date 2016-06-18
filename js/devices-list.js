@@ -2,8 +2,8 @@ $(document).ready(function(){
     
 	getDevices(1,1,1,1);
 
-	$("ul.nav li:nth-child(2)").attr('class', 'active');
-	$("ul.nav li:nth-child(1)").removeClass('active');
+	$("ul#page-header li:nth-child(2)").attr('class', 'active');
+	$("ul#page-header li:nth-child(1)").removeClass('active');
 
 });
 
