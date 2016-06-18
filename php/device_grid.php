@@ -19,8 +19,8 @@ class DeviceGrid {
 	public function getDeviceByCategory($cat, $prom = 0) {
 		$this->db->connect();
 
-		if ($prom) $sql = "SELECT name, price, image_path  FROM DEVICE WHERE device_type='$cat' AND promotion = 1";
-		else $sql = "SELECT name, price, image_path  FROM DEVICE WHERE device_type='$cat'";
+		if ($prom) $sql = "SELECT name, id, price, image_path  FROM DEVICE WHERE device_type='$cat' AND promotion = 1";
+		else $sql = "SELECT name, id, price, image_path  FROM DEVICE WHERE device_type='$cat'";
 
 		
 		$result = $this->db->con->query($sql);
@@ -32,7 +32,7 @@ class DeviceGrid {
 			
 			
 			while ($row = $result->fetch_assoc()) {
-				$resultArray+=array($i => array('name' => $row['name'], 'price' => $row['price'], 'img' => $row['image_path']));
+				$resultArray+=array($i => array('name' => $row['name'], 'price' => $row['price'], 'img' => $row['image_path'], 'id' => $row['id']));
 				
 				$i+=1;
 			}
@@ -45,8 +45,8 @@ class DeviceGrid {
 	public function getAllDevices($prom = 0) {
 		$this->db->connect();
 
-		if ($prom) $sql = "SELECT name, price, image_path  FROM DEVICE WHERE promotion = 1";
-		else $sql = "SELECT name, price, image_path  FROM DEVICE";
+		if ($prom) $sql = "SELECT name, id, price, image_path  FROM DEVICE WHERE promotion = 1";
+		else $sql = "SELECT name, id, price, image_path  FROM DEVICE";
 		$result = $this->db->con->query($sql);
 
 		$resultArray = array();
@@ -56,7 +56,7 @@ class DeviceGrid {
 			
 			
 			while ($row = $result->fetch_assoc()) {
-				$resultArray+=array($i => array('name' => $row['name'], 'price' => $row['price'], 'img' => $row['image_path']));
+				$resultArray+=array($i => array('name' => $row['name'], 'price' => $row['price'], 'img' => $row['image_path'], 'id' => $row['id']));
 				
 				$i+=1;
 			}
