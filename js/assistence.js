@@ -2,8 +2,8 @@ $(document).ready(function(){
     
 	getAssistence(1,1,1,0);
 
-	$("ul.nav li:nth-child(4)").attr('class', 'active');
-	$("ul.nav li:nth-child(1)").removeClass('active');
+	$("ul#page-header li:nth-child(4)").attr('class', 'active');
+	$("ul#page-header li:nth-child(1)").removeClass('active');
 
 });
 
