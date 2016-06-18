@@ -22,7 +22,7 @@
                     </li>
                     <li><a href="./smartlife.html">Smart Life</a>
                     </li>
-                    <li><a href="./assistance.html">Assitance</a>
+                    <li><a href="./assistence.php">Assitence</a>
                     </li>
                     <li><a href="./home.html">Who we are</a>
                     </li>
