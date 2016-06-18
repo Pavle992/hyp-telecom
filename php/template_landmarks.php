@@ -15,12 +15,17 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 
+<<<<<<< Updated upstream
                 <ul class="nav navbar-nav" id="page-header">
                     <li class="active"><a href="./home.html">Home</a>
+=======
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./home.php">Home</a>
+>>>>>>> Stashed changes
                     </li>
                     <li><a href="./devices-list.php">Devices</a>
                     </li>
-                    <li><a href="./smartlife.html">Smart Life</a>
+                    <li><a href="./sl_services_list.php">Smart Life</a>
                     </li>
                     <li><a href="./assistence.php">Assitence</a>
                     </li>

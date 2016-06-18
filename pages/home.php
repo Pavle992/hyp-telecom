@@ -23,6 +23,7 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream:pages/home.html
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -59,6 +60,10 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
+=======
+    <!-- Landmark template incuded -->
+     <?php require_once('../php/template_landmarks.php'); ?>
+>>>>>>> Stashed changes:pages/home.php
     <!-- Begin page wrapper -->
     <div class="page-wrap">
         
@@ -75,7 +80,7 @@
                 <div class="carousel-caption">
                     <h2 class="mojH1">Samsung Galaxy S7 | S7 Edge</h2>
                     <h3>From 20€/month and after a year<br/> you are free to keep it, change it or return it</h3>
-                     <a href="./devices.html" class="btn btn-primary btn-xl">Find Out More</a>
+                     <a href="devices.html" class="btn btn-primary btn-xl">Find Out More</a>
                 </div>
             </div>
 
@@ -84,7 +89,7 @@
                 <div class="carousel-caption">
                     <h2>Big Gym</h2>
                     <h3>Be more. Do more.</h3>
-                     <a href=".devices-list.html" class="btn btn-primary btn-xl">Find Out More</a>
+                     <a href="devices.html" class="btn btn-primary btn-xl">Find Out More</a>
                 </div>
             </div>
         </div>
@@ -241,7 +246,32 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Form -->          
+                <!-- End Form -->
+
+                <!-- Map & contact --> 
+                <div class="container">
+                    <div class="row" id="map_contact_container">
+                        <div class="col-md-6">
+                            <h2>Contact</h2>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="nameField">Name:</label>
+                                    <input type="text" class="form-control" id="nameField" placeholder="Enter Name" required/>
+                                    <label for="emailField">Email:</label>
+                                    <input type="email" class="form-control" id="emailField" placeholder="Enter Email" required/>
+                                    <label for="MessageField">MessageField:</label>
+                                    <textarea class="form-control" id="MessageField" placeholder="Enter Message" ></textarea>
+                                    <p></p>
+                                    <button class="btn btn-default">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6" id="map_container">
+                            <div id="map_canvas"></div>
+                        </div>
+                    </div>
+
+                </div>        
     </div>
 
 
@@ -257,6 +287,7 @@
 
     <script src="../js/loadPageContent.js"></script>
     <script src="../js/home.js"></script>
+    <script src="../js/loadMap.js"></script>
 </body>
 
 </html>

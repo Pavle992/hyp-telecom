@@ -33,4 +33,9 @@ body {
     color: #D5B65D;
 }
 
+#map_canvas{
+  height: 100%;
+}
+
+
 

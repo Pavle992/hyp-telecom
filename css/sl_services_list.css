@@ -1,0 +1,33 @@
+#url_nav{
+	padding-top:60px;
+}
+.jumbotron{
+	margin: 0px;
+}
+.jumbotron > h2,h4{
+	color:white;
+	text-align: center;
+}
+.text-muted{
+	text-align: center;	
+}
+.container-fluid{
+	padding: 0px;
+}
+
+div#sl_services_container.container{
+	margin:0px;
+	width: 100%;
+	padding: 0px;
+}
+footer> .container{
+	margin:0px;
+	padding: 0px;
+}
+ul.breadcrumb{
+	margin-bottom: 0px;
+}
+
+footer > div{
+	margin: 0px;
+}
