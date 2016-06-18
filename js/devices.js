@@ -60,7 +60,7 @@ function fill_assistance_information(assistances){
 
   var params = (window.location.search.replace("?", "")).split("=");
   $.ajax({
-    url:'http://localhost:8000/hyp-telecom/php/get_device_by_id.php',
+    url:'../php/get_device_by_id.php',
     method:'GET',
     contentType: "application/json; charset=UTF-8",
     data: {'id':params[1]},

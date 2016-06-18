@@ -19,7 +19,7 @@ class MySql {
 		$this->password = "";
 		
 		$this->hostname = "localhost";
-		$this->port = 3306;
+		//$this->port = 3306;
 		
 	}
 
@@ -33,7 +33,7 @@ class MySql {
 		$this->CloseConnection();
 		
 		
-		$this->con = mysqli_connect($this->hostname, $this->username, $this->password, $this->database, $this->port);
+		$this->con = mysqli_connect($this->hostname, $this->username, $this->password, $this->database);
 		
 		
 		if(!$this->con){

@@ -71,7 +71,8 @@ function getDevices(phone, tablet, smart, prom) {
       	 var insertString = "";
 
       	 $.each(devices, function (i, device) {
-      	 	 var insertBox = '<div class="col-lg-3 col-lg-offset-1 device-block"><div class="device-image"><img src="' + device.img + '" class="device-image"></div><div class="text-center"><h4>' + device.name + '</h4></div><div class="text-center"><h4>'+device.price + '</h4></div><div class="text-center"><button class="btn btn-primary" type="submit">Details</button></div></div>';
+      	 	 var insertBox = '<div class="col-lg-3 col-lg-offset-1 device-block">'
+  							+ '<div class="device-image"><img src="..' + device.img + '" class="device-image"></div><div class="text-center"><h4>' + device.name + '</h4></div><div class="text-center"><h4>'+device.price + '</h4></div><div class="text-center"><button class="btn btn-primary" type="submit">Details</button></div></div>';
       	 	 if (i == 0)  {
       	 	 	insertString+='<div class="row">';
       	 	 	insertString+=insertBox;
