@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-  function add_breadcrumb(name){
-    var rootBreadcrumbLast = $('#url_navigator ol li:last');
-    rootBreadcrumbLast.html(name);
-
-  }
 
   function fill_device_information(device){
 
@@ -82,8 +77,7 @@ function fill_assistance_information(assistances){
               fill_device_information(device);
               fill_sl_service_information(device.sl_services);
               fill_assistance_information(device.assistances);
-              add_breadcrumb(device.name);
-              
+              $('#device-name-breadcrumb').html(device.name);              
             }          
           },
     error: function(requestObject, error, errorThrown) {

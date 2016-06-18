@@ -21,6 +21,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="../lib/js/jquery-2.2.4.min.js"></script>
+    <script src="../js/devices.js"></script>
 </head>
 
 <body>
@@ -67,7 +68,7 @@
                 <ol class="breadcrumb">
                     <li><a href="./home.html">Home</a></li>
                     <li><a href="./devices-list.php">Devices</a></li>
-                    <li class="active">Device</li> 
+                    <li class="active" id="device-name-breadcrumb"></li>
                 </ol>
             </div>
             <div class="row"><h3 class="device-name"></h3></div>
@@ -97,35 +98,35 @@
                         <table class="table table-striped">
                             <tbody>
                               <tr>
-                                <td>CPU</td>
+                                <td class="col col-md-3">CPU</td>
                                 <td class="device-cpu"></td>
                               </tr>
                               <tr>
-                                <td>OS</td>
+                                <td class="col col-md-3">OS</td>
                                 <td class="device-os"></td>
                               </tr>
                               <tr>
-                                <td>Resolution</td>
+                                <td class="col col-md-3">Resolution</td>
                                 <td class="device-resolution"></td>
                               </tr>
                               <tr>
-                                <td>Display Size</td>
+                                <td class="col col-md-3">Display Size</td>
                                 <td class="device-dispsize"></td>
                               </tr>
                               <tr>
-                                <td>Display Type</td>
+                                <td class="col col-md-3">Display Type</td>
                                 <td class="device-disptype"></td>
                               </tr>
                               <tr>
-                                <td>SIM</td>
+                                <td class="col col-md-3">SIM</td>
                                 <td class="device-sim"></td>
                               </tr>
                               <tr>
-                                <td>Weight</td>
+                                <td class="col col-md-3">Weight</td>
                                 <td class="device-weight"></td>
                               </tr>
                               <tr>
-                                <td>Dimensions</td>
+                                <td class="col col-md-3">Dimensions</td>
                                 <td class="device-dimensions"></td>
                               </tr>
                             </tbody>
@@ -151,7 +152,7 @@
         </div>
     </footer>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../js/devices.js"></script>
+   
 </body>
 
 </html>
