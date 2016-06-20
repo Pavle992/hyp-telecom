@@ -18,8 +18,9 @@ else
 {
 	$cnt = (string)sizeof($_SESSION['cart_items']);
 }
-$cnt++;
+
 $_SESSION['cart_items'][$cnt]=$item;
+$cnt++;
 $_SESSION['total_price']+=$item["price"];
 $_SESSION['total_items'] = (string)sizeof($_SESSION['cart_items']); 
  

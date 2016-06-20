@@ -36,8 +36,8 @@ $(document).ready(function(){
   function update_cart(){
 
     var name = $('#device-container').find('.device-name').text();
-    var price = $('#device-container').find('.device-image-id').attr("src");
-    var path = $('#device-container').find('.device-price-text').text();
+    var path = $('#device-container').find('.device-image-id').attr("src");
+    var price = $('#device-container').find('.device-price-text').text();
 
     $.ajax({
       url:'../php/add_to_cart.php',
