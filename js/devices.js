@@ -4,6 +4,63 @@ $(document).ready(function(){
   $("#nav-devices").addClass('active');
 
 
+  var params = (window.location.search.replace("?", "")).split("=");
+  $.ajax({
+    url:'../php/get_device_by_id.php',
+    method:'GET',
+    contentType: "application/json; charset=UTF-8",
+    data: {'id':params[1]},
+    dataType:'json',
+    success:function(data){
+          // console.log(data);
+          if (data.hasOwnProperty('success') && data.success === 0){
+                $('.page-wrap .container-msg').append(
+                    $('<p>Invalid request</p>').addClass('error-msg'));
+            }
+            else{
+              var device = data['device'][0];
+              fill_device_information(device);
+              fill_sl_service_information(device.sl_services);
+              fill_assistance_information(device.assistances);
+              $('#device-name-breadcrumb').html(device.name);
+              document.getElementById ("add-cart").addEventListener ("click", update_cart);
+            }          
+          },
+    error: function(requestObject, error, errorThrown) {
+          console.log("Error: "+errorThrown);
+              $('.page-wrap .container').append(
+                $('<p>Please check your internet connection</p>').addClass('error-msg'));
+          }
+    });
+
+  function update_cart(){
+
+    var name = $('#device-container').find('.device-name').text();
+    var price = $('#device-container').find('.device-image-id').attr("src");
+    var path = $('#device-container').find('.device-price-text').text();
+
+    $.ajax({
+      url:'../php/add_to_cart.php',
+      method:'GET',
+      contentType: "application/json; charset=UTF-8",
+      data: {'name':name,
+              'price':price,
+              'path':path
+      },
+      dataType:'json',
+      success:function(data){
+            console.log(data);
+            var total_items = data;
+            $('#cart-icon').text(total_items); //put the total num of items in cart
+            },
+      error: function(requestObject, error, errorThrown) {
+            console.log("Error: "+errorThrown);
+                $('.page-wrap .container').append(
+                  $('<p>Please check your internet connection</p>').addClass('error-msg'));
+            }
+    });
+  }
+
   function fill_device_information(device){
 
     var rootDeviceElement = $('#device-container');
@@ -19,6 +76,11 @@ $(document).ready(function(){
     rootDeviceElement.find('.device-sim').html(device.sim);
     rootDeviceElement.find('.device-dimensions').html(device.dimensions);
     rootDeviceElement.find('.device-weight').html(device.weight);
+
+    $('#device-name-hidden').attr('value',device.name);
+    $('#device-price-hidden').attr('value',device.price);
+    $('#device-path-hidden').attr('value',device.image_path);
+
   };
 
   function create_sl_service_container(sl_service){
@@ -62,32 +124,6 @@ function fill_assistance_information(assistances){
 };
 
 
-  var params = (window.location.search.replace("?", "")).split("=");
-  $.ajax({
-    url:'../php/get_device_by_id.php',
-    method:'GET',
-    contentType: "application/json; charset=UTF-8",
-    data: {'id':params[1]},
-    dataType:'json',
-    success:function(data){
-          // console.log(data);
-          if (data.hasOwnProperty('success') && data.success === 0){
-                $('.page-wrap .container-msg').append(
-                    $('<p>Invalid request</p>').addClass('error-msg'));
-            }
-            else{
-              var device = data['device'][0];
-              fill_device_information(device);
-              fill_sl_service_information(device.sl_services);
-              fill_assistance_information(device.assistances);
-              $('#device-name-breadcrumb').html(device.name);              
-            }          
-          },
-    error: function(requestObject, error, errorThrown) {
-          console.log("Error: "+errorThrown);
-              $('.page-wrap .container').append(
-                $('<p>Please check your internet connection</p>').addClass('error-msg'));
-          }
-    });
+
 
 });

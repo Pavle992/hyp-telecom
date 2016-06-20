@@ -1,5 +1,11 @@
-<?php
+
+<?php  
+
 require_once('../php/dbconnection.php');
+ session_start();
+    if(!isset($_SESSION['total_items'])){
+    $_SESSION['total_items']=null;
+}
 
 if (isset($_GET['id'])) {
     $assistenceId = $_GET['id'];

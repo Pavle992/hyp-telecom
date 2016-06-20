@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION['total_items'])){
+    $_SESSION['total_items']=null;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +27,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="../lib/js/jquery-2.2.4.min.js"></script>
-    <script src="../js/devices.js"></script>
+    
 </head>
 
 <body>
@@ -47,7 +53,11 @@
                         </div>
                         <div class="device-price col col-md-4">
                             <label class="device-price-value row">Price: <label class="device-price-text"></label></label>
-                            <div class="row"><button class="btn btn-primary ">Add to Cart</button></div>
+                            <div class="row">
+                                    <button class="btn btn-primary"  id="add-cart">Add to Cart
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,6 +128,7 @@
         </div>
     </footer>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/devices.js"></script>
    
 </body>
 

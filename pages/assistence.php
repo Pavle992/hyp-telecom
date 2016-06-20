@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION['total_items'])){
+    $_SESSION['total_items']=null;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

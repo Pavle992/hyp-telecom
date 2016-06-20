@@ -1,6 +1,4 @@
 
-
-
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -30,7 +28,7 @@
                     </li>
                     <li id="nav-contact"><a href="./home.php">Contact</a>
                     </li>
-                    <li id="nav-cart"><a href="./cart.php">Cart <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                    <li id="nav-cart"><a href="./cart.php">Cart <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span id="cart-icon" class="badge"><?php echo $_SESSION['total_items']?></span></a>
                     </li>
                 </ul>
             </div>

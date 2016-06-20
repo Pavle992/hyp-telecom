@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,6 +97,7 @@
         </div>
     </footer>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/cart.js"></script>
    
 </body>
 
