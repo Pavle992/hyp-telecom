@@ -34,7 +34,6 @@
 
     <!-- Landmark template incuded -->
      <?php require_once('../php/template_landmarks.php'); ?>
-
     <!-- Begin page wrapper -->
     <div class="page-wrap">
         
