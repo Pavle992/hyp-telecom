@@ -1,23 +1,20 @@
 <?php
-    require_once('../php/dbconnection.php');
+require_once('../php/dbconnection.php');
 
-    if (isset($_GET['id'])) {
-        $assistenceId = $_GET['id'];
+if (isset($_GET['id'])) {
+    $assistenceId = $_GET['id'];
 
-        $db = new MySql();
-        $db->connect();
+    $db = new MySql();
+    $db->connect();
 
-        $sql = "SELECT name, description  FROM assistance WHERE id=$assistenceId";
+    $sql = "SELECT name, description  FROM assistance WHERE id=$assistenceId";
 
-        $result = $db->con->query($sql);
+    $result = $db->con->query($sql);
 
-        $row = $result->fetch_assoc();
+    $row = $result->fetch_assoc();
 
-        // $sqlDevices = "SELECT id_dev FROM dev_assistance WHERE id ="  . $row['id'] . "";
-        // $resultDevices = $db->con->query($sqlDevices);
+}
 
-
-    }
 ?>
 
 
@@ -35,21 +32,21 @@
     <!-- <link href="css/index.css" rel="stylesheet"> -->
     <link href="../css/assistence_single.css" rel="stylesheet">
     
-	<!-- Thumbnail gallery responsive -->
+    <!-- Thumbnail gallery responsive -->
     <!-- <link href="resources/css/thumbnail-gallery.css" rel="stylesheet"> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="../lib/js/jquery-2.2.4.min.js"></script>
-    <script src="../js/assistence.js"></script>
-</head>
+      <![endif]-->
+      <script src="../lib/js/jquery-2.2.4.min.js"></script>
+      <script src="../js/assistence.js"></script>
+  </head>
 
-<body>
+  <body>
 
-    
+
 
     <div class="container-fluid">
 
@@ -88,25 +85,86 @@
                         
                     </div>
 
+                    
+                    <div class="col-lg-12">
+                        <h3 class="title">Available For:</h3>
+                    </div>
+                   
+
                     <!-- DEVICES -->
                     <div class="row pad-top">
-                        <div class="col-lg-12">
+                    <div class="col-lg-12">   
+
+                        <?php 
+                            $sqlDevices = "SELECT device.name, device.image_path, device.id FROM device join dev_assistance ON dev_assistance.id_dev = device.id WHERE dev_assistance.id_assistance=" . $assistenceId . "";
+                            $resultDevices = $db->con->query($sqlDevices);
+
                             
+                            $i=0; ?>
+
+                            <?php
+                            // if there are devices
+                            if ($resultDevices->num_rows > 0) {
+
+                                while ($rowDevice = $resultDevices->fetch_assoc()) {
+                                    $box = 
+                                    '<div class="col-lg-3 device-block-outer">
+                                        <div class="device-image device-block">
+                                            <img src="..' . $rowDevice['image_path'] .  '" class="device-image">
+                                            <div class="text-center"><h4>' . $rowDevice['name'] . '</h4></div>
+                                            <div class="text-center">
+                                            <form action="../pages/devices.php" methode="get">
+                                            <input type="hidden" name="id" value=' . $rowDevice['id'] . ' >
+                                            <button class="btn btn-primary" type="submit">Details</button>
+                                            </form>
+                                            </div>
+                                        </div>
+                                    </div>';
+
+                                    if ($i == 0) {
+                                        // open new row
+                                        echo '<div class="row">';
+
+                                        // device block
+                                        echo $box;
+                                    }
+                                    else if ($i % 4 == 0 && $i != 0) {
+                                        echo '</div>';
+                                        echo '<div class="row">';
+                                        // device block
+                                        echo $box;
+                                    }
+                                    else {
+                                        // device block
+                                        echo $box;
+                                    }
+
+                                    //echo '</div>';
+
+                                  $i++;  
+                                }
+                            }
+
+                        ?>
+                          
                         </div>
                     </div>
 
-                </div>
-                    </div>
 
-                    <div class="footer"></div>
+
+
                 </div>
             </div>
+
+            <div class="footer"></div>
         </div>
     </div>
-          
-            <!-- EOF PAGE -->
+</div>
+</div>
 
-    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- EOF PAGE -->
+
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

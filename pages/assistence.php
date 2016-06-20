@@ -10,6 +10,8 @@
     <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="css/index.css" rel="stylesheet"> -->
     <link href="../css/devices-list.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     
 	<!-- Thumbnail gallery responsive -->
     <!-- <link href="resources/css/thumbnail-gallery.css" rel="stylesheet"> -->
@@ -114,6 +116,12 @@
         </div>
     </div>
           
+
+          <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Telecom 2016</p>
+        </div>
+    </footer>
             <!-- EOF PAGE -->
 
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>

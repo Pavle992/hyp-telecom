@@ -20,6 +20,14 @@
     font-weight: bold;
 }
 
+.title {
+    color: #595D5E;
+}
+
+.device-block-outer {
+    padding: 20px;
+}
+
 .device-block {
     
     border-color: #ddd;
@@ -29,7 +37,9 @@
     padding-bottom: 20px;
     margin-top: 20px;
 
+
 }
+
 
 .device-image {
     height: 100%;
