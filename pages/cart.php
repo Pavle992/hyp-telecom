@@ -24,7 +24,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="../lib/js/jquery-2.2.4.min.js"></script>
-    <script src="../js/cart.js"></script>
 </head>
 
 <body>
@@ -52,31 +51,7 @@
                                 <th class="col col-md-2"></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col col-md-4">
-                                    <a href="#" class="thumbnail"><img class="item-img img-responsive" src="../img/devices/Phones/huawei-p9.jpg" alt="Huawei P9"></a>
-                                </td>
-                                <td class="col col-md-4">Huawei p9</td>
-                                <td class="col col-md-2">600</td>
-                                <th class="col col-md-2">
-                                    <button type="button" class="btn btn-default btn-sm">
-                                        <span class="glyphicon glyphicon-remove"></span> Remove
-                                    </button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td class="col col-md-4">
-                                    <a href="#" class="thumbnail"><img class="item-img img-responsive" src="../img/devices/Phones/huawei-p9.jpg" alt="Huawei P9"></a>
-                                </td>
-                                <td class="col col-md-4">sdad</td>
-                                <td class="col col-md-2">sda</td>
-                                <th class="col col-md-2">
-                                    <button type="button" class="btn btn-default btn-sm">
-                                        <span class="glyphicon glyphicon-remove"></span> Remove
-                                    </button>
-                                </th>
-                            </tr>
+                        <tbody class="cart-item-container">
                         </tbody>
                     </table>
                 </div>
