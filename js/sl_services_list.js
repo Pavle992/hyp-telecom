@@ -14,7 +14,7 @@ $(document).ready(function(){
 				.html("More")
 				.addClass("btn btn-success center-block")
 				.click(function(){
-					window.location.href = '../php/get_sl_service.php?id='+sl_service.id;
+					window.location.href = './sl_service.php?id='+sl_service.id;
 				})
 				.appendTo("#sls"+sl_service.id);
 			// Jumbotron END
