@@ -2,10 +2,10 @@
 
 	include "SmartLife.php";
 
-	if(isset($_GET["id"])){
+	if(isset($_REQUEST["id"])){
 		// echo "Device required: ".$_GET["id"];
 
-		$id=$_GET["id"];
+		$id=$_REQUEST["id"];
 
 		$db=new MySql();
 
@@ -24,7 +24,6 @@
 				$entry=new SmartLife($row);
 				$entry->linkDevices();
 
-				echo json_encode($entry);
 				array_push($response["sl_service"], json_encode($entry));
 			}
 		}

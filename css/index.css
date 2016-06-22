@@ -11,7 +11,7 @@
     text-shadow  : 2px 2px 2px rgba(50, 50, 50, .8);
 }
 .carousel-indicators {
-  bottom:-50px;
+  bottom: 5px;
 }
 .carousel-inner {
    margin-bottom:50px;

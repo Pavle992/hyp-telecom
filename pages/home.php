@@ -138,23 +138,7 @@
                               <!-- Wraper for slides -->
                               <div class="carousel-inner" role="listbox" id="newsCarouselI">
 
-                                <!-- <div class="item active">
-                                    <img src="../img/home/homeactive.png" alt="Telecom"/>
-                                    <div class="carousel-caption">
-                                        <h2 class="mojH1">Samsung Galaxy S7 | S7 Edge</h2>
-                                        <h3>From 20€/month and after a year<br/> you are free to keep it, change it or return it</h3>
-                                         <a href="./devices.html" class="btn btn-primary btn-xl">Find Out More</a>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <img src="../img/home/home2.png" alt="Telecom"/>
-                                    <div class="carousel-caption">
-                                        <h2>Big Gym</h2>
-                                        <h3>Be more. Do more.</h3>
-                                         <a href=".devices-list.html" class="btn btn-primary btn-xl">Find Out More</a>
-                                    </div>
-                                </div> -->
+                                <!-- Fill in with news AJAX -->
 
                             </div>
 
