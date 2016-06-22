@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function create_cart_item(item){
 
-    var cart_item = ('<tr class="cart_item-"'+item.id+'><td class="col col-md-4"><a href="#" class="thumbnail">'+
+    var cart_item = ('<tr class="cart_item-'+item.id+'"><td class="col col-md-4"><a href="#" class="thumbnail">'+
       '<img class="item-img img-responsive" src="'+item.path+'" alt="'+item.name+'"></a></td>'+
       '<td class="col col-md-4">'+item.name+'</td>'+
       '<td class="col col-md-2">'+item.price+'</td>'+
@@ -19,18 +19,19 @@ function create_cart_item(item){
 
 function fill_cart_information(items){
 
+  console.log(items);
   var rootCartContainer = $('.cart-item-container');
-  if (items.length>0) {
-    for (var j in items) {
-      rootCartContainer.append(create_cart_item(items[j]));
-      document.getElementById ("remove-item-"+items[j].id).addEventListener ("click", remove_cart_item);
+    
+    for (var key in items) {
+      if (items.hasOwnProperty(key)) {
+      console.log(items[key]);
+      rootCartContainer.append(create_cart_item(items[key]));
+      document.getElementById ("remove-item-"+key).addEventListener ("click", remove_cart_item);
     }
-  }
+    }
+  
 };
 
-function updateTotalPrice(){
-
-};
 
 function remove_cart_item(id){
   console.log(this.id.split("-")[2]);
@@ -42,9 +43,15 @@ function remove_cart_item(id){
     data: {'id':id},
     dataType:'json',
     success:function(data){
-          console.log(data.cart_items); 
+          console.log("Data after removing:");
+          console.log(data); 
           $('.device-price-text').html(data.total_price);
-          $('.cart-item-container').remove('.cart_item-'+id);    
+          $('#cart-icon').text(data.total_items);
+          // $('.cart-item-container').hide();
+          // $('.cart-item-container').remove('.cart_item-'+id); 
+          // $('.cart-item-container').show();
+          $('.cart-item-container').empty(); 
+          fill_cart_information(data.cart_items);
           },
     error: function(requestObject, error, errorThrown) {
           console.log("Error: "+errorThrown);
@@ -62,7 +69,7 @@ function remove_cart_item(id){
     data: {},
     dataType:'json',
     success:function(data){
-          console.log(data.cart_items); 
+          console.log(data); 
           $('.device-price-text').html(data.total_price);
           fill_cart_information(data.cart_items);      
           },
