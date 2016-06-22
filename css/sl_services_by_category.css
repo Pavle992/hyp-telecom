@@ -1,0 +1,34 @@
+.jumbotron {
+    height         : 400px;
+    text-align     : center;
+    background-size: cover !important;
+    background     : #ddd url('') center center;
+}
+.jumbotron .container {
+    width        : auto;
+    padding      : 3%;
+    color        : #f8f8f8;
+    text-align   : center;
+    margin-right : 10%;
+    border-radius: 5px;
+    display      : inline-block;
+}
+ul.breadcrumb{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.main-container{
+	margin: 0px;
+	padding: 0px;
+}
+
+.picture .img-responsive{
+	height: 200px;
+}
+
+.caption h4, p{
+	text-align: center;
+
+}

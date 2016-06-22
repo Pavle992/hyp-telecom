@@ -2,7 +2,10 @@
 	padding-top:60px;
 }
 .jumbotron{
+	height         : 300px;
 	margin: 0px;
+	background-size: cover !important;
+	background     : #ddd url('') center center;
 }
 .jumbotron > h2,h4{
 	color:white;

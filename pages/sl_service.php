@@ -62,14 +62,8 @@
 
                         <div class="sl_service_data_container col col-md-12 panel panel-default">
                             
-                            <div class="sl_service_description row panel-body">
-
-                                <div class="sl_service_description_container col col-md-7">
-                                    <h3>Description</h4><br/>
-                                    <div class="sl_service_description_text col col-md-12"><p></p></div>
-                                </div>
+                            <div class="sl_service_description row panel-body">                           
                             
-
 
                                 <div class="act_image_container col col-md-5">
                                     <!-- Image -->
@@ -94,7 +88,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div
+                                </div>
+
+                                <div class="sl_service_description_container col col-md-7">
+                                    <h3>Description</h4><br/>
+                                    <div class="sl_service_description_text col col-md-12"><p></p></div>
+                                </div>
+
+
                             </div>
                         </div>
                     
@@ -106,34 +107,7 @@
                             <div  class="row col col-md-12 panel-header"><h3>Devices</h3></div>
                             <div class="linked_devices_description row panel-body">
                                 <!-- Devices are filed with AJAX -->
-                                
-                                <!-- <div class=" col-sm-6 col-md-3">
-                                    <div class="picture ">
-                                        <img class="center-block device-img img-responsive" src="../img/devices/Phones/huawei-p9.jpg" alt="ImeUredjaja"/>
-                                        <div class="sl-service-name caption"><h4>ImeUredjaja</h4>
-                                            <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class=" col-sm-6 col-md-3">
-                                    <div class="picture ">
-                                        <img class="center-block device-img img-responsive" src="../img/devices/Phones/huawei-p9.jpg" alt="ImeUredjaja"/>
-                                        <div class="sl-service-name caption"><h4>ImeUredjaja</h4>
-                                            <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class=" col-sm-6 col-md-3">
-                                    <div class="picture ">
-                                        <img class="center-block device-img img-responsive" src="../img/devices/Phones/huawei-p9.jpg" alt="ImeUredjaja"/>
-                                        <div class="sl-service-name caption"><h4>ImeUredjaja</h4>
-                                            <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
-                                        </div>
-                                    </div>
-                                </div> -->
-
+                        
                             </div>
                     </div>
 

@@ -1,6 +1,7 @@
 <?php 
 
-	include "SmartLife.php";
+	include "dbconnection.php";
+	include "SmartLifeCategory.php";
 
 	if(isset($_REQUEST["name"])){
 		// echo "Device required: ".$_GET["id"];
@@ -10,20 +11,19 @@
 		$db=new MySql();
 
 		$db->connect();
-
-		$result = mysqli_query($db->con,"select * from sl_service where category='$name'") or die(mysql_error());
+		$result = mysqli_query($db->con,"select * from sl_service_categories where name='$name'") or die(mysql_error());
 
 		if(mysqli_num_rows($result) > 0){
 			
-			$response["sl_services_cat"] = array();
+			$response["sl_service_category"] = array();
 			$response["success"]  = 1;
 			$response["message"]  = "SL_Service found!";
 
 			while ($row = mysqli_fetch_array($result)) {
 
-				$entry=new SmartLife($row);
+				$entry=new SmartLifeCategory($row);
 
-				array_push($response["sl_services_cat"], json_encode($entry));
+				array_push($response["sl_service_category"], json_encode($entry));
 			}
 		}
 		else{
