@@ -2,6 +2,10 @@ $(document).ready(function(){
 
 	function createSLServiceContainer(sl_service){
 
+		$(".active:first").removeClass('active');
+		$("#nav-smartlife").addClass("active");
+
+
 		var slService=$.parseJSON(sl_service);
 
 		// setting basic sl_service info
@@ -48,6 +52,7 @@ $(document).ready(function(){
 	var url_params = (window.location.search.replace("?", "")).split("=");
 
     if (typeof loadContent !== 'undefined' && url_params.length === 2) {
+
         loadContent(
             '../php/get_sl_service.php',
             'sl_service', $('#sl_service_container'), createSLServiceContainer, 

@@ -3,6 +3,9 @@ $(document).ready(function(){
 
 	function createSLServiceCategoryContainer(sl_service_category){
 
+		$(".active:first").removeClass('active');
+		$("#nav-smartlife").addClass("active");
+
 		var slServiceCat=$.parseJSON(sl_service_category);
 
 		// setting basic sl_service info

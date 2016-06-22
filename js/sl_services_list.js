@@ -1,6 +1,10 @@
 $(document).ready(function(){
 
 	function load_SL_Services(sl_services){
+
+			$(".active:first").removeClass('active');
+			$("#nav-smartlife").addClass("active");
+
 			//Adding Jumbotron for each SL Service
 			var sl_service=$.parseJSON(sl_services);
 
@@ -26,7 +30,6 @@ $(document).ready(function(){
 	// load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     if (typeof loadContent !== 'undefined') {
-    	
         loadContent(
             '../php/get_all_sl_service_categories.php',
             'sl_service_categories', $('#sl_services_container'), load_SL_Services);
