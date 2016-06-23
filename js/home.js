@@ -68,29 +68,32 @@ $(document).ready(function() {
           evt.preventDefault();
            $('#contactUs-message').html($('#nameField').val() + ', thank you for contacting us!');  
 
-          // if (typeof loadContent !== 'undefined') {
+          if (typeof loadContent !== 'undefined') {
 
-          //     var name=$("#nameField").val();
-          //     var email=$("#emailField").val();
-          //     var message=$("#MessageField").val();
+              var name=$("#nameField").val();
+              var email=$("#emailField").val();
+              var message=$("#MessageField").val();
 
-          //     //simple AJAX
-          //     $.ajax({
-          //         url:"../php/contact.php",
-          //         method: 'POST',
-          //         data: {'name':name,'email':email,'message':message },
-          //         dataType:'json',
-          //         success: function(data){
-          //           console.log(data);
+              //simple AJAX
+              $.ajax({
+                  url:"../php/contact.php",
+                  method: 'GET',
+                  contentType: "application/json; charset=UTF-8",
+                  data: { 'name':name,
+                          'email':email,
+                          'message':message
+                        },
+                  success: function(data){
+                    console.log(data);
                                      
-          //         },
-          //         error: function(requestObject, error, errorThrown){
-          //           $('.page-wrap .container').append(
-          //             $('<p>Please check your internet connection!</p>').addClass('error-msg'));
-          //         }
+                  },
+                  error: function(requestObject, error, errorThrown){
+                    $('.page-wrap .container').append(
+                      $('<p>Please check your internet connection!</p>').addClass('error-msg'));
+                  }
 
-          //       });
-          // }
+                });
+          }
 
           $('#contactUs-form')[0].reset();
 

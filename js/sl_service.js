@@ -9,11 +9,15 @@ $(document).ready(function(){
 		var slService=$.parseJSON(sl_service);
 
 		// setting basic sl_service info
+		$("#sl_breadcrumb").html(slService.name);
+		
 		$("#sl_name").html(slService.name);
-		$("#sl_service_id").attr("src",".."+slService.image_path)
+		$("#sl_service_id").attr("src",".."+slService.image_path);
 		$(".sl_service_description_text > p").html(slService.description);
 		$(".act_rules_description_text").html(slService.activation_rules);
 		$(".sl_service_price_text").html(slService.rates_discount_price);
+
+		$("#add-cart").click(update_cart);
 
 		// checking if there are liked devices 
 		if(slService.devices!=='undefined'){
@@ -23,6 +27,7 @@ $(document).ready(function(){
 
 
 	}
+
 
 	function fillLinkedDevices(json_devices){
 
@@ -45,6 +50,35 @@ $(document).ready(function(){
 	                +"</div>");
 
 		});
+
+	}
+
+	function update_cart(){
+		
+		var name = $('#sl_name').text();
+	    var path = $('#sl_service_id').attr("src");
+	    var price = $('.sl_service_price_text').text();
+
+	    $.ajax({
+	      url:'../php/add_to_cart.php',
+	      method:'GET',
+	      contentType: "application/json; charset=UTF-8",
+	      data: {'name':name,
+	              'price':price,
+	              'path':path
+	      },
+	      dataType:'json',
+	      success:function(data){
+	            console.log(data);
+	            var total_items = data;
+	            $('#cart-icon').text(total_items); //put the total num of items in cart
+	            },
+	      error: function(requestObject, error, errorThrown) {
+	            console.log("Error: "+errorThrown);
+	                $('.page-wrap .container').append(
+	                  $('<p>Please check your internet connection</p>').addClass('error-msg'));
+	            }
+	    });
 
 	}
 

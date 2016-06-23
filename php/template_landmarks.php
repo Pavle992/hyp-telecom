@@ -22,11 +22,11 @@
                     </li>
                     <li id="nav-assistence"><a href="./assistence.php">Assitence</a>
                     </li>
-                    <li id="nav-who-we-are"><a href="#aboutUs">Who we are</a>
+                    <li id="nav-who-we-are"><a href="./home.php#aboutUs">Who we are</a>
                     </li>
-                    <li id="nav-group"><a href="#news">The Group</a>
+                    <li id="nav-group"><a href="./home.php#news">The Group</a>
                     </li>
-                    <li id="nav-contact"><a href="#contact">Contact</a>
+                    <li id="nav-contact"><a href="./home.php#contact">Contact</a>
                     </li>
                     <li id="nav-cart"><a href="./cart.php">Cart <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span id="cart-icon" class="badge"><?php echo $_SESSION['total_items']?></span></a>
                     </li>

@@ -44,14 +44,14 @@
                         <ul class="breadcrumb">
                             <li><a href="./home.php">Home</a></li>
                             <li><a href="./sl_services_list.php">SL Services</a></li>
-                            <li class="active">SL_Service</li>
+                            <li class="active" id="sl_breadcrumb"></li>
                         </ul>
                     </div>
 
                     <!-- SL Service name fill-in with AJAX -->
                     
-                    <div class="row" id="sl_name">
-                        <h3></h3>
+                    <div class="row" >
+                        <h3 id="sl_name"></h3>
                     </div>
 
                     <!-- Main Part -->
@@ -78,7 +78,7 @@
                                             </div>
                                             <div class="sl_service_price col col-md-8">
                                                 <label class="sl_service_value row">
-                                                    Price category: <label class="sl_service_price_text"></label>
+                                                    Price: <label class="sl_service_price_text"></label> € / month
                                                 </label>
                                                 <div class="row">
                                                         <button class="btn btn-primary"  id="add-cart">Add to Cart

@@ -6,9 +6,9 @@
 		// echo "Device required: ".$_GET["id"];
 
 		//SQL injection prevention :-)
-		$name=mysql_real_escape_string($_REQUEST["name"]);
-		$email=mysql_real_escape_string($_REQUEST["email"]);
-		$message=mysql_real_escape_string($_REQUEST["message"]);
+		$name=$_REQUEST["name"];
+		$email=$_REQUEST["email"];
+		$message=$_REQUEST["message"];
 
 		$db=new MySql();
 
@@ -16,7 +16,7 @@
 		$result = mysqli_query($db->con,"insert into contact (name, email , message) values ('$name','$email','$message');")
 							 or die(mysql_error());
 
-		if(mysqli_num_rows($result) > 0){
+		if($result){
 			
 			echo "Success";
 		}
