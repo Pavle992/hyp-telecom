@@ -84,13 +84,13 @@
                     <div class="the_group_info "> </div>
                 </div>
                 <div class="the_group_img col-md-6">
-                    <img class="img-rounded img-responsive"/>
+                    <img class="img-rounded img-responsive center-block"/>
                 </div>
             </div>
 
             <div class="governance_container row">
                 <div class="governance_img col-md-6">
-                    <img class="img-rounded img-responsive"/>
+                    <img class="img-rounded img-responsive center-block"/>
                 </div>
                 <div class="col-md-6">
                     <h3>Governance </h3>
@@ -103,12 +103,12 @@
                     <div class="bm_info"> </div>
                 </div>
                 <div class="bm_img col-md-6">
-                    <img class="img-rounded"/>
+                    <img class="img-rounded img-responsive center-block"/>
                 </div>
             </div>
             <div class="for_investors_container row">
                 <div class="for_investors_img col-md-6">
-                    <img/>
+                    <img class="img-rounded img-responsive center-block"/>
                 </div>
                 <div class="col-md-6">
                     <h3>For investors</h3>
@@ -125,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container" id="news">
                     <div class="row">
                         <!-- CARUSEL OVDE -->
 
@@ -143,14 +143,14 @@
                             </div>
 
                                <!-- Left and right controls -->
-                               <a class="left carousel-control" href="#newsCarousel" role="button" data-slide="prev">
+                               <!-- <a class="left carousel-control" href="#newsCarousel" role="button" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                               </a>
                               <a class="right carousel-control" href="#newsCarousel" role="button" data-slide="next">
                                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
-                              </a>
+                              </a> -->
 
                             </div>
 
@@ -158,7 +158,7 @@
                     </div>
                 </div>    
 
-                <div class="container">
+                <div class="container" id="aboutUs">
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <h2 class="section-heading">About Us</h2>
@@ -203,25 +203,25 @@
                 <!-- End Form -->
 
                 <!-- Map & contact --> 
-                <div class="container">
+                <div class="container" id="contact">
                     <div class="row" id="map_contact_container">
                         <div class="col-md-6">
                             <h2>Contact</h2>
-                            <form role="form">
-                                <div class="form-group">
+                            <form role="form" id="contactUs-form">
+                                <div class="form-group" >
                                     <label for="nameField">Name:</label>
                                     <input type="text" class="form-control" id="nameField" placeholder="Enter Name" required/>
                                     <label for="emailField">Email:</label>
                                     <input type="email" class="form-control" id="emailField" placeholder="Enter Email" required/>
                                     <label for="MessageField">MessageField:</label>
                                     <textarea class="form-control" id="MessageField" placeholder="Enter Message" ></textarea>
-                                    <p></p>
-                                    <button class="btn btn-default">Submit</button>
+                                    <p><span id="contactUs-message" class="conf-msg"> </span></p>
+                                    <button class="btn btn-default" id="submitBtn">Submit</button>
                                 </div>
                             </form>
                         </div>
                         <div class="col-md-6" id="map_container">
-                            <div id="map_canvas"></div>
+                            <div id="map_canvas" ></div>
                         </div>
                     </div>
 

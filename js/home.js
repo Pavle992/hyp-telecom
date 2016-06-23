@@ -63,7 +63,37 @@ $(document).ready(function() {
     }
 
 
+   // contactUs form listeners
+      $('#contactUs-form').submit(function(evt) {
+          evt.preventDefault();
+           $('#contactUs-message').html($('#nameField').val() + ', thank you for contacting us!');  
 
+          // if (typeof loadContent !== 'undefined') {
 
+          //     var name=$("#nameField").val();
+          //     var email=$("#emailField").val();
+          //     var message=$("#MessageField").val();
+
+          //     //simple AJAX
+          //     $.ajax({
+          //         url:"../php/contact.php",
+          //         method: 'POST',
+          //         data: {'name':name,'email':email,'message':message },
+          //         dataType:'json',
+          //         success: function(data){
+          //           console.log(data);
+                                     
+          //         },
+          //         error: function(requestObject, error, errorThrown){
+          //           $('.page-wrap .container').append(
+          //             $('<p>Please check your internet connection!</p>').addClass('error-msg'));
+          //         }
+
+          //       });
+          // }
+
+          $('#contactUs-form')[0].reset();
+
+      });
    
 });

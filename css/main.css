@@ -32,10 +32,21 @@ body {
 .error-msg{
     color: #D5B65D;
 }
+.conf-msg{
+    color: #33CC00;
+}
 
 #map_canvas{
   height: 100%;
 }
 
+.the_group_info, .governance_info, .bm_info, .for_investors_info{
+    text-align: justify;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.the_group_container>*>h3, .governance_container>*>h3, .bm_container>*>h3, .for_investors_container>*>h3{
+    text-align: center;
+}
 
 
