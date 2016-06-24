@@ -42,8 +42,8 @@
                 <img src="../img/home/homeactive.png" alt="Telecom"/>
                 <div class="carousel-caption leftPos">
                     <h2 class="mojH1">Samsung Galaxy S7 | S7 Edge</h2>
-                    <h3>From 20€/month and after a year<br/> you are free to keep it, change it or return it</h3><br/>
-                     <a href="devices-list.php" class="btn btn-primary btn-xl">Find Out More</a>
+                    <h3>From 20€/month and after a year<br/> you are free to keep it, change it or return it</h3>
+                     <a href="devices.php?id=21" class="btn btn-primary btn-xl">Find Out More</a>
                 </div>
             </div>
 

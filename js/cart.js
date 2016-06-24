@@ -19,17 +19,19 @@ function create_cart_item(item){
 
 function fill_cart_information(items){
 
-  console.log(items);
   var rootCartContainer = $('.cart-item-container');
-    
+  if(items.length==0){
+    rootCartContainer.append("<th>No items in cart</th>");
+  }
+  else{
     for (var key in items) {
-      if (items.hasOwnProperty(key)) {
-      console.log(items[key]);
-      rootCartContainer.append(create_cart_item(items[key]));
-      document.getElementById ("remove-item-"+key).addEventListener ("click", remove_cart_item);
+        if (items.hasOwnProperty(key)) {
+        console.log(items[key]);
+        rootCartContainer.append(create_cart_item(items[key]));
+        document.getElementById ("remove-item-"+key).addEventListener ("click", remove_cart_item);
+      }
     }
-    }
-  
+  }
 };
 
 
@@ -47,9 +49,6 @@ function remove_cart_item(id){
           console.log(data); 
           $('.device-price-text').html(data.total_price);
           $('#cart-icon').text(data.total_items);
-          // $('.cart-item-container').hide();
-          // $('.cart-item-container').remove('.cart_item-'+id); 
-          // $('.cart-item-container').show();
           $('.cart-item-container').empty(); 
           fill_cart_information(data.cart_items);
           },
