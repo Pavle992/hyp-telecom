@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-	getAssistence(1,1,1,0);
+	getAssistence(1,1,1,1,0);
 
 	$("ul#page-header li:nth-child(4)").attr('class', 'active');
 	$("ul#page-header li:nth-child(1)").removeClass('active');
@@ -10,60 +10,67 @@ $(document).ready(function(){
 function handleAllClick(cb) {
 	document.getElementById('filter-all').checked = true;
 	if (document.getElementById('filter-all').checked) {
-		document.getElementById('filter-phone').checked = false;
-		document.getElementById('filter-tablet').checked = false;
+		document.getElementById('filter-services').checked = false;
+		document.getElementById('filter-payment').checked = false;
+		document.getElementById('filter-monitor').checked = false;
 		document.getElementById('filter-smart').checked = false;
 	}
 }
 
 function filterClick(cb) {
-	var getPhone = 0;
-	var getTablet = 0;
+	var getService = 0;
+	var getPayment = 0;
+	var getMonitor = 0;
 	var getSmart = 0;
 	var prom = 0;
 
-	if (document.getElementById('filter-phone').checked || document.getElementById('filter-tablet').checked || document.getElementById('filter-smart').checked) {
+	if (document.getElementById('filter-services').checked || document.getElementById('filter-payment').checked || document.getElementById('filter-monitor').checked || document.getElementById('filter-smart').checked) {
 		document.getElementById('filter-all').checked = false;
-		if (document.getElementById('filter-phone').checked) getPhone = 1;
-		if (document.getElementById('filter-tablet').checked) getTablet = 1;
+		if (document.getElementById('filter-services').checked) getService = 1;
+		if (document.getElementById('filter-payment').checked) getPayment = 1;
+		if (document.getElementById('filter-monitor').checked) getMonitor = 1;
 		if (document.getElementById('filter-smart').checked) getSmart = 1;
 		
 	}
 	else {
 		document.getElementById('filter-all').checked = true;
-		getPhone = 1;
-		getTablet = 1;
+		getService = 1;
+		getPayment = 1;
+		getMonitor = 1;
 		getSmart = 1;
 	}
 	
   	if ($('#prom-tab').attr('class') == "active") prom = 1;
-    getAssistence(getPhone, getTablet, getSmart, prom);
+    getAssistence(getService, getPayment, getMonitor, getSmart, prom);
  
 }
 
 function handleCatClick() {
 	document.getElementById('filter-all').checked = true;
-	document.getElementById('filter-phone').checked = false;
-	document.getElementById('filter-tablet').checked = false;
+	document.getElementById('filter-services').checked = false;
+	document.getElementById('filter-payment').checked = false;
+	document.getElementById('filter-monitor').checked = false;
 	document.getElementById('filter-smart').checked = false;
-	getAssistence(1,1,1,0);
+	getAssistence(1,1,1,1,0);
 }
 
 function handleHighlightClick() {
 	document.getElementById('filter-all').checked = true;
-	document.getElementById('filter-phone').checked = false;
-	document.getElementById('filter-tablet').checked = false;
+	document.getElementById('filter-services').checked = false;
+	document.getElementById('filter-payment').checked = false;
+	document.getElementById('filter-monitor').checked = false;
 	document.getElementById('filter-smart').checked = false;
-	getAssistence(1,1,1,1);
+	getAssistence(1,1,1,1,1);
 }
 
-function getAssistence(phone, tablet, smart, prom) {
+function getAssistence(service, payment, monitor, smart, prom) {
 	$.ajax({
       url: '../php/assistence_grid.php',
       type: 'post',
       data: {
-      	'phone': phone,
-      	'tablet': tablet,
+      	'service': service,
+      	'payment': payment,
+      	'monitor': monitor,
       	'smart': smart,
       	'hilight' : prom
   			},

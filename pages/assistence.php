@@ -89,13 +89,16 @@
                                                 <label><input type="checkbox" value="all" checked="" id="filter-all" onclick='handleAllClick(this);'>All</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="phone" id="filter-phone">Phones</label>
+                                                <label><input type="checkbox" value="phone" id="filter-services">Services</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="tablet" id="filter-tablet">Tablets</label>
+                                                <label><input type="checkbox" value="tablet" id="filter-payment">Payment</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="smart" id="filter-smart">Smart Devices</label>
+                                                <label><input type="checkbox" value="smart" id="filter-monitor">Monitor Costs</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="smart" id="filter-smart">Smart Life</label>
                                             </div>
                                         </div>
     

@@ -19,8 +19,8 @@ class AssistenceGrid {
 	public function getAssistenceByCategory($cat, $hilight = 0) {
 		$this->db->connect();
 
-		if ($hilight) $sql = "SELECT assistance.name, assistance.id FROM assistance WHERE id in (SELECT DISTINCT dev_assistance.id_assistance FROM dev_assistance JOIN device on dev_assistance.id_dev=device.id WHERE device.device_type='$cat') AND highlight_flag = 'Y';";
-		else $sql = "SELECT assistance.name, assistance.id FROM assistance WHERE id in (SELECT DISTINCT dev_assistance.id_assistance FROM dev_assistance JOIN device on dev_assistance.id_dev=device.id WHERE device.device_type='$cat');";
+		if ($hilight) $sql = "SELECT name, id FROM assistance WHERE category='$cat' AND highlight_flag = 'Y';";
+		else $sql = "SELECT name, id FROM assistance WHERE category='$cat'";
 
 		
 		$result = $this->db->con->query($sql);
@@ -77,13 +77,14 @@ $result = array();
 $hilight = $_POST['hilight'];
 
 
-if ($_POST['phone'] == 1 && $_POST['tablet'] == 1 && $_POST['smart'] == 1) {
+if ($_POST['service'] == 1 && $_POST['payment'] == 1 && $_POST['monitor'] == 1 && $_POST['smart'] == 1) {
 	$result =  $grid->getAllAssistence($hilight);
 }
 
 else {
-	if ($_POST['phone'] == 1) $result = array_merge($result, $grid->getAssistenceByCategory("Phone", $hilight));
-	if ($_POST['tablet'] == 1) $result = array_merge($result, $grid->getAssistenceByCategory("Tablet", $hilight));
+	if ($_POST['service'] == 1) $result = array_merge($result, $grid->getAssistenceByCategory("Service", $hilight));
+	if ($_POST['payment'] == 1) $result = array_merge($result, $grid->getAssistenceByCategory("Payment", $hilight));
+	if ($_POST['monitor'] == 1) $result = array_merge($result, $grid->getAssistenceByCategory("Monitor", $hilight));
 	if ($_POST['smart'] == 1) $result = array_merge($result, $grid->getAssistenceByCategory("Smart", $hilight));
 }
 
