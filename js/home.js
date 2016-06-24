@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
 
-    function loadHomepageComponents(homepage) { // clone the empty boilerplate node and fill it with content
-       // $('.jumbotron').css('background-image', 'url(' + homepage.header_image_path + ')');
+    function loadHomepageComponents(homepage) { 
+
         $('.the_group_info').html(homepage.group_desc);
         $('.the_group_img img').attr('src',homepage.group_path);
         $('.governance_info').html(homepage.gover_desc);
@@ -29,8 +29,8 @@ $(document).ready(function() {
                     );
                 $('#newsCarouselI').append(
                      '<div class="item">'
-                      +'<img src="../img/home/home2.png" alt="Telecom"/>'
-                      +  '<div class="carousel-caption">'
+                      +'<img src="..'+data.image_path+'" alt="Telecom"/>'
+                      +  '<div class="carousel-caption '+data.text_position+'">'
                       +      '<p>'+data.description+'</p>'
                       +  '</div>'
                       +'</div>'         
@@ -42,8 +42,8 @@ $(document).ready(function() {
                     );
                 $('#newsCarouselI').append(
                      '<div class="item active">'
-                      +'<img src="../img/home/home2.png" alt="Telecom"/>'
-                      +  '<div class="carousel-caption">'
+                      +'<img src="..'+data.image_path+'" alt="Telecom"/>'
+                      +  '<div class="carousel-caption '+data.text_position+'">'
                       +      '<p>'+data.description+'</p>'
                       +  '</div>'
                       +'</div>'         
@@ -98,5 +98,19 @@ $(document).ready(function() {
           $('#contactUs-form')[0].reset();
 
       });
+
+      //Adding styles
+        $('head').append('<link href="../css/main.css" rel="stylesheet">');
+        $('head').append('<link href="../css/main.css" rel="stylesheet">');
+
+
+        //CAROUSEL RESPONSIVNESS
+        $('.carousel .carousel-caption').css('zoom', $('.carousel').width()/1250);
+
+        $(window).resize(function() {
+          $('.carousel .carousel-caption').css('zoom', $('.carousel').width()/1250);
+        });
+
+  
    
 });

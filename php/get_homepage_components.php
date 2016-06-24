@@ -45,6 +45,8 @@
 				
 					$entry1                        = array();
 					$entry1["description"]   	   = $row1["description"];
+					$entry1["image_path"]   	   = $row1["image_path"];
+					$entry1["text_position"]   	   = $row1["text_position"];
 
 					// push single entry into final response array
 					array_push($entry["news"], $entry1);

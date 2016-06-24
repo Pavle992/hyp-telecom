@@ -13,10 +13,30 @@
 .carousel-indicators {
   bottom: 5px;
 }
-.carousel-inner {
-   margin-bottom:50px;
+
+#telCarousel{
+  margin-bottom: 15px;
+}
+
+/*carousel-caption positioning*/
+
+.carousel-caption{
+   margin-bottom: 80px;
    position:center;
 }
+
+.leftPos{
+   margin-bottom: 80px;
+   margin-left: -500px;
+   position:center;
+}
+
+.rightPos{
+   margin-bottom: 40px;
+   margin-right: -500px;
+   position:center;
+}
+
 .carousel .container h1,
 .carousel .container h2 {
     font-weight: 700 !important;
@@ -39,33 +59,10 @@
     font-weight: 700 !important;
 }
 
-/* @media (min-width: @screen-xs) {
-    .mojH1{font-size: 10px;}
-}
-
-@media (max-width: @screen-sm) {
-    .mojH1{font-size: 14px;}
-}
-
-
-h5{
-    font-size: 1.4em;
-}  */
-
-@media(max-width: 480px) {
-  h2 {
-    font-size: 11pt;
-  }
-}
-
 .centerBlock{
     margin-left:auto;
    margin-right:auto;
    display:center;
 }
 
-
-#map_canvas{
-  height: 100%;
-}
 

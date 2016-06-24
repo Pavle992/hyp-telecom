@@ -19,14 +19,7 @@
     <link href="../css/index.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
     
-	<!-- Thumbnail gallery responsive -->
-    <!-- <link href="resources/css/thumbnail-gallery.css" rel="stylesheet"> -->
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
     <script src="../lib/js/jquery-2.2.4.min.js"></script>
 </head>
 
@@ -47,19 +40,19 @@
           <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img src="../img/home/homeactive.png" alt="Telecom"/>
-                <div class="carousel-caption">
+                <div class="carousel-caption leftPos">
                     <h2 class="mojH1">Samsung Galaxy S7 | S7 Edge</h2>
-                    <h3>From 20€/month and after a year<br/> you are free to keep it, change it or return it</h3>
-                     <a href="devices.html" class="btn btn-primary btn-xl">Find Out More</a>
+                    <h3>From 20€/month and after a year<br/> you are free to keep it, change it or return it</h3><br/>
+                     <a href="devices-list.php" class="btn btn-primary btn-xl">Find Out More</a>
                 </div>
             </div>
 
             <div class="item">
                 <img src="../img/home/home2.png" alt="Telecom"/>
-                <div class="carousel-caption">
-                    <h2>Big Gym</h2>
-                    <h3>Be more. Do more.</h3>
-                     <a href="devices.html" class="btn btn-primary btn-xl">Find Out More</a>
+                <div class="carousel-caption leftPos">
+                    <h2>Sky is the Limit</h2>
+                    <h3>Check new devices in our store.</h3><br/>
+                     <a href="devices-list.php" class="btn btn-primary btn-xl">Find Out More</a>
                 </div>
             </div>
         </div>
@@ -143,14 +136,14 @@
                             </div>
 
                                <!-- Left and right controls -->
-                               <!-- <a class="left carousel-control" href="#newsCarousel" role="button" data-slide="prev">
+                               <a class="left carousel-control" href="#newsCarousel" role="button" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                               </a>
                               <a class="right carousel-control" href="#newsCarousel" role="button" data-slide="next">
                                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
-                              </a> -->
+                              </a>
 
                             </div>
 

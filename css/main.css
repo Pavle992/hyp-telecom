@@ -50,3 +50,6 @@ body {
 }
 
 
+p.text-muted.inovation,p.text-muted.testimonials,p.text-muted.projects{
+  text-align: justify;
+}
