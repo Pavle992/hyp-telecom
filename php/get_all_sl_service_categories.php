@@ -4,7 +4,7 @@
 
 
 
-		$con= mysqli_connect("localhost","root","","hyptelecom");
+		$con= mysqli_connect("localhost","root","hyptelecom16","hyptelecom");
 
 		$result = mysqli_query($con,"select * from sl_service_categories ") or die(mysql_error());
 

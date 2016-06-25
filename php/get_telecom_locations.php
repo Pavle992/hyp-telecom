@@ -7,7 +7,7 @@
 $response = array();
 
 // include db connect class
-$con = mysqli_connect("localhost", "root", "", "hyptelecom");
+$con = mysqli_connect("localhost", "root", "hyptelecom16", "hyptelecom");
 
 $result = mysqli_query($con, "SELECT * FROM locations") or die(mysql_error());
 

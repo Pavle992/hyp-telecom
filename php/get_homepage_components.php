@@ -8,7 +8,7 @@
 // array for JSON response
 	$response = array();
 
-	$con= mysqli_connect("localhost","root","","hyptelecom");
+	$con= mysqli_connect("localhost","root","hyptelecom16","hyptelecom");
 
 	// get all homepage columns
 	$result = mysqli_query($con, "SELECT * FROM homepage") or die(mysql_error());
