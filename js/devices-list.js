@@ -2,6 +2,8 @@ $(document).ready(function(){
     
 	getDevices(1,1,1,1);
 
+	$("#template_landmarks").load("../template_landmarks.html");
+
 	$(".active:first").removeClass('active');
   	$("#nav-devices").addClass('active');
 
@@ -60,7 +62,7 @@ function handlePromClick() {
 
 function getDevices(phone, tablet, smart, prom) {
 	$.ajax({
-      url: '../php/device_grid.php',
+      url: 'http://hyp-telecom.ml/php/device_grid.php',
       type: 'post',
       data: {
       	'phone': phone,
