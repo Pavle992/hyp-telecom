@@ -34,7 +34,7 @@ if(isset($_GET["id"])){
 			$entry["sl_services"] = array();
 			$entry["assistances"] = array();
 
-			$sl_services_result = mysqli_query($con,"select SL.id,name,image_path from SL_SERVICE SL inner join DEV_SL DEVSL on SL.id=DEVSL.id_sl where DEVSL.id_dev='".$id."'") or die(mysql_error());
+			$sl_services_result = mysqli_query($con,"select sl.id,name,image_path from sl_service sl inner join dev_sl devsl on sl.id=devsl.id_sl where devsl.id_dev='".$id."'") or die(mysql_error());
 
 			if(mysqli_num_rows($sl_services_result) > 0){
 
@@ -58,7 +58,7 @@ if(isset($_GET["id"])){
 				$response["message"] = "SL services not found!";
 			}
 
-			$assistances_result = mysqli_query($con,"select ASS.id,name from ASSISTANCE ASS inner join DEV_ASSISTANCE DEVAS on ASS.id=DEVAS.id_assistance where DEVAS.id_dev='".$id."'") or die(mysql_error());
+			$assistances_result = mysqli_query($con,"select ass.id,name from assistance ass inner join dev_assistance devas on ass.id=devas.id_assistance where devas.id_dev='".$id."'") or die(mysql_error());
 
 				if(mysqli_num_rows($assistances_result) > 0){
 
