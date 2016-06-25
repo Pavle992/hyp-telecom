@@ -5,6 +5,7 @@
 	</head>
 	<body>
 	<h1>Hellloooouuu</h1>
+	<p></p>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -18,18 +19,7 @@
 					    dataType:'json',
 					    success:function(data){
 					          // console.log(data);
-					          if (data.hasOwnProperty('success') && data.success === 0){
-					                $('.page-wrap .container-msg').append(
-					                    $('<p>Invalid request</p>').addClass('error-msg'));
-					            }
-					            else{
-					              var device = data['device'][0];
-					              fill_device_information(device);
-					              fill_sl_service_information(device.sl_services);
-					              fill_assistance_information(device.assistances);
-					              $('#device-name-breadcrumb').html(device.name);
-					              document.getElementById ("add-cart").addEventListener ("click", update_cart);
-					            }          
+					          $('p').html(data);
 					          },
 					    error: function(requestObject, error, errorThrown) {
 					          console.log("Error: "+errorThrown);
