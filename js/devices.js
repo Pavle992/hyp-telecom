@@ -95,7 +95,7 @@ $(document).ready(function(){
 
 function create_assistance_item(assistance){
 
-    var assitance_item = ('<button type="button" class="list-group-item"><a href="./assistence_single.php?id='+assistance.id+'">'+assistance.name+'</a></button>');
+    var assitance_item = ('<a class="list-group-item" href="./assistence_single.php?id='+assistance.id+'">'+assistance.name+'</a>');
     return assitance_item;
 
   };
