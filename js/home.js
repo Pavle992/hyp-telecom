@@ -58,6 +58,12 @@ $(document).ready(function() {
         });
     };
 
+
+
+    //apending template landmarks
+
+    $("#template_landmarks").load("../php/template_landmarks.html");
+
     // load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     if (typeof loadContent !== 'undefined') {

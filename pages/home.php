@@ -1,9 +1,4 @@
-<?php 
-    session_start();
-    if(!isset($_SESSION['total_items'])){
-    $_SESSION['total_items']=null;
-}
-?>
+
 <!DOCTYPE html>
 
 
@@ -25,8 +20,8 @@
 
 <body>
 
-    <!-- Landmark template incuded -->
-     <?php require_once('../php/template_landmarks.php'); ?>
+    <div id="template_landmarks"></div>
+
     <!-- Begin page wrapper -->
     <div class="page-wrap">
         
