@@ -68,7 +68,7 @@ $(document).ready(function() {
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     if (typeof loadContent !== 'undefined') {
         loadContent(
-            '../php/get_homepage_components.php',
+            'http://hyp-telecom.ml/php/get_homepage_components.php',
             'homepage', $('#homepage-container'), loadHomepageComponents);
     }
 
@@ -86,7 +86,7 @@ $(document).ready(function() {
 
               //simple AJAX
               $.ajax({
-                  url:"../php/contact.php",
+                  url:"http://hyp-telecom.ml/php/contact.php",
                   method: 'GET',
                   contentType: "application/json; charset=UTF-8",
                   data: { 'name':name,

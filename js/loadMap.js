@@ -25,7 +25,7 @@ function fillMapContainer(location) {
     if (typeof loadContent !== 'undefined') {
         console.log("loadContent defined");
         loadContent(
-            '../php/get_telecom_locations.php',
+            'http://hyp-telecom.ml/php/get_telecom_locations.php',
             'location', $('#map_contact_container'), fillMapContainer);
     }
 
