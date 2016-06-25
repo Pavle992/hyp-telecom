@@ -235,6 +235,7 @@
     <script src="../js/loadPageContent.js"></script>
     <script src="../js/home.js"></script>
     <script src="../js/loadMap.js"></script>
+    <script src="../js/landmarks_active_elemetns.js"></script>
 </body>
 
 </html>

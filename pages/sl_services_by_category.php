@@ -87,6 +87,7 @@
         <script src="../js/loadPageContent.js"></script>
         <script src="../js/sl_services_by_category.js"></script>
         <script src="../js/loadLinkedSLServices.js"></script>
+        <script src="../js/landmarks_active_elemetns.js"></script>
 
     </body>
 </html>

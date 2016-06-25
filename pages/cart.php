@@ -73,6 +73,7 @@
     </footer>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/cart.js"></script>
+    <script src="../js/landmarks_active_elemetns.js"></script>
    
 </body>
 

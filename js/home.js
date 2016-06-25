@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    
+
+
+
 
     function loadHomepageComponents(homepage) { 
 
@@ -99,6 +103,8 @@ $(document).ready(function() {
 
       });
 
+
+
       //Adding styles
         $('head').append('<link href="../css/main.css" rel="stylesheet">');
         $('head').append('<link href="../css/main.css" rel="stylesheet">');
@@ -111,6 +117,6 @@ $(document).ready(function() {
           $('.carousel .carousel-caption').css('zoom', $('.carousel').width()/1250);
         });
 
-  
+          
    
 });

@@ -126,7 +126,7 @@
         <script src="../lib/bootstrap/js/bootstrap.min.js"></script> <!-- !!! -->
         <script src="../js/loadPageContent.js"></script>
         <script src="../js/sl_service.js"></script>
-
+        <script src="../js/landmarks_active_elemetns.js"></script>
 
     </body>
 </html>
