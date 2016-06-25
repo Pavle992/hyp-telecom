@@ -5,7 +5,7 @@ if(isset($_GET["id"])){
 	$id = $_GET["id"];
 	$con= mysqli_connect("localhost","root","","hyptelecom");
 
-	$result = mysqli_query($con,"select * from DEVICE where id='".$id."'") or die(mysql_error());
+	$result = mysqli_query($con,"select * from device where id='".$id."'") or die(mysql_error());
 	if(mysqli_num_rows($result) > 0){
 		
 		$response["device"] = array();
