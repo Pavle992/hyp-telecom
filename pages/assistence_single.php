@@ -37,7 +37,7 @@ if (isset($_GET['id'])) {
     <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="css/index.css" rel="stylesheet"> -->
     <link href="../css/assistence_single.css" rel="stylesheet">
-    
+    <link href="../css/main.css" rel="stylesheet">
     <!-- Thumbnail gallery responsive -->
     <!-- <link href="resources/css/thumbnail-gallery.css" rel="stylesheet"> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -69,11 +69,13 @@ if (isset($_GET['id'])) {
             <div class="container">
 
                 <!-- Path -->
-                <ol class="breadcrumb path">
-                    <li><a href="./home.php">Home</a></li>
-                    <li><a href="./assistence.php">Assistence</a></li>
-                    <li class="active"> <?php echo $row['name']; ?> </li>
-                </ol>
+                <div class="row" id="url_navigator">
+                    <ol class="breadcrumb path">
+                        <li><a href="./home.php">Home</a></li>
+                        <li><a href="./assistence.php">Assistence</a></li>
+                        <li class="active"> <?php echo $row['name']; ?> </li>
+                    </ol>
+                </div>
 
                 <!-- Main body -->
                 <div class="row">
@@ -162,14 +164,18 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
 
-            <div class="footer"></div>
+            <!-- <div class="footer"></div> -->
         </div>
     </div>
 </div>
 </div>
 
 <!-- EOF PAGE -->
-
+<footer class="footer">
+        <div class="container">
+            <p class="text-muted">Telecom 2016</p>
+        </div>
+</footer>
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/landmarks_active_elemetns.js"></script>
 </body>

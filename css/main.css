@@ -9,7 +9,7 @@ body {
 /* footer */
 .page-wrap {
     min-height   : 100%;
-    padding-top  : 50px;	/* navigation height */
+    /*padding-top  : 50px;	 navigation height */
     margin-bottom:-60px;    /* footer height */
 }
 .page-wrap:after {
@@ -17,6 +17,16 @@ body {
     content: 	"";
     display: block;
 }
+
+.path {
+    margin-top: 20px;
+}
+
+.landmarks {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
 .footer {
     width:	100%;
     height: 60px;

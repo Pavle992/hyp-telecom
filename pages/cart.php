@@ -13,7 +13,7 @@
     <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/index.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
-    <link href="../css/devices.css" rel="stylesheet">
+    <!-- <link href="../css/devices.css" rel="stylesheet"> -->
     
     <!-- Thumbnail gallery responsive -->
     <!-- <link href="resources/css/thumbnail-gallery.css" rel="stylesheet"> -->
@@ -27,13 +27,20 @@
 </head>
 
 <body>
-    <!-- Fixed navbar -->
-    <?php require_once('../php/template_landmarks.php'); ?>
+    <div class="container-fluid">
+
+        <!-- Landmarks Header -->
+        <div class="row"> 
+            <div class="col-lg-12 landmarks">
+                <?php require_once('../php/template_landmarks.php'); ?>
+            </div>
+            
+        </div>
     <!-- Begin page wrapper -->
     <div class="page-wrap" id="device-container">
         <div class="container container-msg">
             <div class="row" id="url_navigator">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb path">
                     <li><a href="./home.php">Home</a></li>
                     <li class="active">Cart</li>
                 </ol>
@@ -64,7 +71,7 @@
             </div>
         </div>
     </div>
-    
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">

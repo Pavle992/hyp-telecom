@@ -32,12 +32,20 @@
 
 <body>
     <!-- Fixed navbar -->
-    <?php require_once('../php/template_landmarks.php'); ?>
+    <div class="container-fluid">
+
+        <!-- Landmarks Header -->
+        <div class="row"> 
+            <div class="col-lg-12 landmarks">
+                <?php require_once('../php/template_landmarks.php'); ?>
+            </div>
+            
+        </div>
     <!-- Begin page wrapper -->
     <div class="page-wrap" id="device-container">
         <div class="container container-msg">
             <div class="row" id="url_navigator">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb path">
                     <li><a href="./home.php">Home</a></li>
                     <li><a href="./devices-list.php">Devices</a></li>
                     <li class="active" id="device-name-breadcrumb"></li>
@@ -120,6 +128,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Footer -->
     <footer class="footer">
