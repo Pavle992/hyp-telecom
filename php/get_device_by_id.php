@@ -1,5 +1,7 @@
 <?php
+
 header("Access-Control-Allow-Origin: *");
+
 $response=array();
 if(isset($_GET["id"])){
 	$id = $_GET["id"];
