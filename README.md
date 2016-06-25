@@ -1,15 +1,16 @@
 #Hyper Media Project 2016
 ###Live demo:
-- http://hyp-telecom.ml/pages/home.php
+- [site](http://hyp-telecom.ml/pages/home.php)
 
 ###Technologies:
-- PHP -> Backend
-- JavaScript + JQuery
-- HTML5 
-- CSS3 & Bootstrap
++ [JQuery](https://jquery.com/)
++ [Boostrap](http://getbootstrap.com/)
++ PHP
++ HTML5 
++ CSS3
 
 ###Hosting:
-- Digital Ocean -> Student Pack
++ [Digital Ocean](https://www.digitalocean.com/)
 
 
 
