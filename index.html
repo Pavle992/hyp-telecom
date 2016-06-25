@@ -9,7 +9,34 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				// similar behavior as an HTTP redirect
-				window.location.replace("./pages/home.html");
+				// window.location.replace("./pages/home.html");
+				$.ajax({
+					    url:'http://hyp-telecom.ml/php/get_device_by_id.php',
+					    method:'GET',
+					    contentType: "application/json; charset=UTF-8",
+					    data: {'id':3},
+					    dataType:'json',
+					    success:function(data){
+					          // console.log(data);
+					          if (data.hasOwnProperty('success') && data.success === 0){
+					                $('.page-wrap .container-msg').append(
+					                    $('<p>Invalid request</p>').addClass('error-msg'));
+					            }
+					            else{
+					              var device = data['device'][0];
+					              fill_device_information(device);
+					              fill_sl_service_information(device.sl_services);
+					              fill_assistance_information(device.assistances);
+					              $('#device-name-breadcrumb').html(device.name);
+					              document.getElementById ("add-cart").addEventListener ("click", update_cart);
+					            }          
+					          },
+					    error: function(requestObject, error, errorThrown) {
+					          console.log("Error: "+errorThrown);
+					              $('.page-wrap .container').append(
+					                $('<p>Please check your internet connection</p>').addClass('error-msg'));
+					          }
+					    });
 			});
 		</script>
 	</body>

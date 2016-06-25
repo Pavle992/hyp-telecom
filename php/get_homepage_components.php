@@ -1,9 +1,7 @@
 <?php
-/*
- * Following code will list all the equipment
- */
 
-header("Access-Control-Allow-Origin: *");
+
+header('Access-Control-Allow-Origin: *');
 
 // array for JSON response
 	$response = array();
