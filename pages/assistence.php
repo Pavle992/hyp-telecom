@@ -34,16 +34,16 @@
 <body>
 
     
-
     <div class="container-fluid">
 
         <!-- Landmarks Header -->
-        <div class="row"> 
-            <div class="col-lg-12 landmarks">
-                <?php require_once('../php/template_landmarks.php'); ?>
+        
+            <div class="row"> 
+                    <div class="col-lg-12 landmarks">
+                        <?php require_once('../php/template_landmarks.php'); ?>
+                    </div>
+                    
             </div>
-            
-        </div>
 
         <!-- Page Wrapper -->
         <div class="row">

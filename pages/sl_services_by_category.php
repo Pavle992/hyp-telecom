@@ -21,15 +21,16 @@
     </head>
 
     <body>
+       
 
         <div class="container-fluid main-container">
         
-            <!-- Landmarks -->
+            
             <div class="row"> 
-                <div class="col-md-12">
-                    <?php require_once('../php/template_landmarks.php'); ?>
-                </div>
-                
+                    <div class="col-lg-12 landmarks">
+                        <?php require_once('../php/template_landmarks.php'); ?>
+                    </div>
+                    
             </div>
             <!-- Begin page wrapper -->
             <div class="page-wrap">
