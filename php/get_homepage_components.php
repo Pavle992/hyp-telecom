@@ -9,6 +9,7 @@ header("Access-Control-Allow-Origin: *");
 	$response = array();
 
 	$con= mysqli_connect("localhost","root","hyptelecom16","hyptelecom");
+	mysqli_query($con, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
 	// get all homepage columns
 	$result = mysqli_query($con, "SELECT * FROM homepage") or die(mysql_error());
