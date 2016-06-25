@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 	function load_SL_Services(sl_services){
 
+			//changing landmark active element to SL SErvice
 			$(".active:first").removeClass('active');
 			$("#nav-smartlife").addClass("active");
 
