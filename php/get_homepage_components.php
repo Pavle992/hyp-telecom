@@ -6,7 +6,7 @@ header('Access-Control-Allow-Origin: *');
 // array for JSON response
 	$response = array();
 
-	$con= mysqli_connect("localhost","root","hyptelecom16","hyptelecom");
+	$con= mysqli_connect("localhost","hyptelecom16","hyptelecom","my_hyptelecom16");
 	mysqli_query($con, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
 	// get all homepage columns

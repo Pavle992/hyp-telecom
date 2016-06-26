@@ -64,7 +64,7 @@ $(document).ready(function() {
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     if (typeof loadContent !== 'undefined') {
         loadContent(
-            'http://hyp-telecom.ml/php/get_homepage_components.php',
+            'http://hyptelecom16.altervista.org/php/get_homepage_components.php',
             'homepage', $('#homepage-container'), loadHomepageComponents);
     }
 
