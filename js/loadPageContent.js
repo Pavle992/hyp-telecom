@@ -4,6 +4,7 @@ function loadContent(phpUrl, rootJSON, $container, function_createContentElement
 		url:phpUrl,
 		method: 'POST',
 		data: getParams,
+		crossDomain: true,
 		dataType:'json',
 		success: function(data){
 			console.log(data);
