@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
-    
 
-
-
+    $.support.cors=true;
 
     function loadHomepageComponents(homepage) { 
 
@@ -62,9 +60,7 @@ $(document).ready(function() {
 
     //apending template landmarks
 
-    $("#template_landmarks").load("../template_landmarks.html");
-
-    $("#cart-icon").html($.session.get("total_items"));
+    $("#template_landmarks").load("../php/template_landmarks.html");
 
     // load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
