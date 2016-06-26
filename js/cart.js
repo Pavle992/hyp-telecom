@@ -41,7 +41,7 @@ function remove_cart_item(id){
   console.log(this.id.split("-")[2]);
   var id = this.id.split("-")[2];
   $.ajax({
-    url:'../php/remove_from_cart.php',
+    url:'http://hyp-telecom.ml/php/remove_from_cart.php',
     method:'GET',
     contentType: "application/json; charset=UTF-8",
     data: {'id':id},
@@ -64,7 +64,7 @@ function remove_cart_item(id){
 };
 
   $.ajax({
-    url:'../php/get_cart.php',
+    url:'http://hyp-telecom.ml/php/get_cart.php',
     method:'GET',
     contentType: "application/json; charset=UTF-8",
     data: {},
