@@ -2,6 +2,8 @@ $(document).ready(function(){
     
 	getDevices(1,1,1,1);
 
+	$("#template_landmarks").load("../template_landmarks.html");
+
 	$(".active:first").removeClass('active');
   	$("#nav-devices").addClass('active');
 
@@ -60,7 +62,7 @@ function handlePromClick() {
 
 function getDevices(phone, tablet, smart, prom) {
 	$.ajax({
-      url: '../php/device_grid.php',
+      url: 'http://hyp-telecom.ml/php/device_grid.php',
       type: 'post',
       data: {
       	'phone': phone,
@@ -75,7 +77,7 @@ function getDevices(phone, tablet, smart, prom) {
 
       	 $.each(devices, function (i, device) {
       	 	 var insertBox = '<div class="col-lg-3 col-lg-offset-1 device-block">'
-  							+ '<div class="device-image"><img src="..' + device.img + '" class="device-image"></div><div class="text-center"><h4>' + device.name + '</h4></div><div class="text-center"><h4>'+device.price + '</h4></div><div class="text-center"><form action="../pages/devices.php" methode="get"><input type="hidden" name="id" value=' + device.id +' ><button class="btn btn-primary" type="submit">Details</button></form></div></div>';
+  							+ '<div class="device-image"><img src="..' + device.img + '" class="device-image"></div><div class="text-center"><h4>' + device.name + '</h4></div><div class="text-center"><h4>'+device.price + '</h4></div><div class="text-center"><form action="../pages/devices.html" methode="get"><input type="hidden" name="id" value=' + device.id +' ><button class="btn btn-primary" type="submit">Details</button></form></div></div>';
       	 	 if (i == 0)  {
       	 	 	insertString+='<div class="row">';
       	 	 	insertString+=insertBox;

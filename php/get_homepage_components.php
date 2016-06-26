@@ -3,12 +3,17 @@
  * Following code will list all the equipment
  */
 
+<<<<<<< HEAD
 	header("Access-Control-Allow-Origin: *");
+=======
+header("Access-Control-Allow-Origin: *");
+>>>>>>> 465c4dde863f5aa7359f10d2532c1137f5a1ea62
 
 	// array for JSON response
 	$response = array();
 
 	$con= mysqli_connect("localhost","root","hyptelecom16","hyptelecom");
+	mysqli_query($con, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
 	// get all homepage columns
 	$result = mysqli_query($con, "SELECT * FROM homepage") or die(mysql_error());

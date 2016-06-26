@@ -1,12 +1,14 @@
 $(document).ready(function(){
 
+  $("#template_landmarks").load("../template_landmarks.html");
+
   $(".active:first").removeClass('active');
   $("#nav-devices").addClass('active');
 
 
   var params = (window.location.search.replace("?", "")).split("=");
   $.ajax({
-    url:'../php/get_device_by_id.php',
+    url:'http://hyp-telecom.ml/php/get_device_by_id.php',
     method:'GET',
     contentType: "application/json; charset=UTF-8",
     data: {'id':params[1]},
@@ -40,7 +42,7 @@ $(document).ready(function(){
     var price = $('#device-container').find('.device-price-text').text();
 
     $.ajax({
-      url:'../php/add_to_cart.php',
+      url:'http://hyp-telecom.ml/php/add_to_cart.php',
       method:'GET',
       contentType: "application/json; charset=UTF-8",
       data: {'name':name,
@@ -95,7 +97,7 @@ $(document).ready(function(){
 
 function create_assistance_item(assistance){
 
-    var assitance_item = ('<a class="list-group-item" href="./assistence_single.php?id='+assistance.id+'">'+assistance.name+'</a>');
+    var assitance_item = ('<a class="list-group-item" href="./assistence_single.html?id='+assistance.id+'">'+assistance.name+'</a>');
     return assitance_item;
 
   };
