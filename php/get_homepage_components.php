@@ -3,9 +3,9 @@
  * Following code will list all the equipment
  */
 
-//header("Access-Control-Allow-Origin: *");
+	header("Access-Control-Allow-Origin: *");
 
-// array for JSON response
+	// array for JSON response
 	$response = array();
 
 	$con= mysqli_connect("localhost","root","hyptelecom16","hyptelecom");
