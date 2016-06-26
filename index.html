@@ -4,30 +4,12 @@
 		<script src="./lib/js/jquery-2.2.4.min.js"></script>
 	</head>
 	<body>
-	<h1>Hellloooouuu</h1>
-	<p></p>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
 				// similar behavior as an HTTP redirect
-				// window.location.replace("./pages/home.html");
-				$.ajax({
-					    url:'http://hyp-telecom.ml/php/get_device_by_id.php',
-					    method:'GET',
-					    contentType: "application/json; charset=UTF-8",
-					    data: {'id':'3'},
-					    dataType:'json',
-					    success:function(data){
-					          // console.log(data);
-					          $('p').html(data);
-					          },
-					    error: function(requestObject, error, errorThrown) {
-					          console.log("Error: "+errorThrown);
-					              $('.page-wrap .container').append(
-					                $('<p>Please check your internet connection</p>').addClass('error-msg'));
-					          }
-					    });
-			});
+				window.location.replace("./pages/home.html");
+				
 		</script>
 	</body>
 </html>

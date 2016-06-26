@@ -64,6 +64,8 @@ $(document).ready(function() {
 
     $("#template_landmarks").load("../template_landmarks.html");
 
+    $("#cart-icon").html($.session.get("total_items"));
+
     // load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     if (typeof loadContent !== 'undefined') {
