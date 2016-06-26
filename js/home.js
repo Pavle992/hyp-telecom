@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
 
-    
-
     function loadHomepageComponents(homepage) { 
 
         $('.the_group_info').html(homepage.group_desc);
