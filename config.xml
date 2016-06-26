@@ -18,6 +18,8 @@
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Milisko Pavlisko i Pera
     </author>
+
+    <access origin="http://hyp-telecom.ml" />
    
 
 </widget>
