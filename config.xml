@@ -19,7 +19,7 @@
         Milisko Pavlisko i Pera
     </author>
 
-    <access origin="http://hyp-telecom.ml" />
+    <access origin="*" />
    
 
 </widget>
