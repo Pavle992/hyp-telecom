@@ -1,12 +1,14 @@
 $(document).ready(function(){
 
+  $("#template_landmarks").load("../template_landmarks.html");
+
   $(".active:first").removeClass('active');
   $("#nav-cart").addClass('active');
 
 
 function create_cart_item(item){
 
-    var cart_item = ('<tr class="cart_item-'+item.id+'"><td class="col col-md-4"><a href="#" class="thumbnail">'+
+    var cart_item = ('<tr class="cart_item-'+item.id+'"><td class="col col-md-4"><a href="'+item.path+'" class="thumbnail">'+
       '<img class="item-img img-responsive" src="'+item.path+'" alt="'+item.name+'"></a></td>'+
       '<td class="col col-md-4">'+item.name+'</td>'+
       '<td class="col col-md-2">'+item.price+'</td>'+
@@ -39,7 +41,7 @@ function remove_cart_item(id){
   console.log(this.id.split("-")[2]);
   var id = this.id.split("-")[2];
   $.ajax({
-    url:'../php/remove_from_cart.php',
+    url:'http://hyp-telecom.ml/php/remove_from_cart.php',
     method:'GET',
     contentType: "application/json; charset=UTF-8",
     data: {'id':id},
@@ -62,7 +64,7 @@ function remove_cart_item(id){
 };
 
   $.ajax({
-    url:'../php/get_cart.php',
+    url:'http://hyp-telecom.ml/php/get_cart.php',
     method:'GET',
     contentType: "application/json; charset=UTF-8",
     data: {},

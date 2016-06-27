@@ -19,7 +19,7 @@ $(document).ready(function(){
 				.html("More")
 				.addClass("btn btn-success center-block")
 				.click(function(){
-					window.location.href = './sl_services_by_category.php?name='+sl_service.name;
+					window.location.href = './sl_services_by_category.html?name='+sl_service.name;
 				})
 				.appendTo("#sls"+sl_service.id);
 			// Jumbotron END
@@ -27,12 +27,12 @@ $(document).ready(function(){
 
 	}
 
-
+	$("#template_landmarks").load("../template_landmarks.html");
 	// load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     if (typeof loadContent !== 'undefined') {
         loadContent(
-            '../php/get_all_sl_service_categories.php',
+            'http://hyp-telecom.ml/php/get_all_sl_service_categories.php',
             'sl_service_categories', $('#sl_services_container'), load_SL_Services);
         //Adding styles
         $('head').append('<link href="../css/sl_services_list.css" rel="stylesheet">');

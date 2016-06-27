@@ -1,12 +1,11 @@
 <?php 
 
+header("Access-Control-Allow-Origin: *");
 session_start();
-
 
 $item["name"]=isset($_GET['name']) ? $_GET['name'] : "";
 $item["price"]=isset($_GET['price']) ? $_GET['price'] : "";
 $item["path"]=isset($_GET['path']) ? $_GET['path'] : "";
-
 
 if(!isset($_SESSION['cart_items'])){
 	$_SESSION['total_items']=null;

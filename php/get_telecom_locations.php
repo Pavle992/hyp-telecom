@@ -3,6 +3,9 @@
 /*
  * Following code will return single entry of location table
  */
+
+header('Access-Control-Allow-Origin: *');
+session_start();
 // array for JSON response
 $response = array();
 

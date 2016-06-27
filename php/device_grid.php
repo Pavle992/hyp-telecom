@@ -3,6 +3,7 @@
 require_once('dbconnection.php');
 
 header("Access-Control-Allow-Origin: *");
+session_start();
 
 class DeviceGrid {
 

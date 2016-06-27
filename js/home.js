@@ -1,10 +1,6 @@
 $(document).ready(function() {
 
-    
-
-
-
-
+    $.support.cors = true;
     function loadHomepageComponents(homepage) { 
 
         $('.the_group_info').html(homepage.group_desc);

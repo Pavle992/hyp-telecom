@@ -1,9 +1,4 @@
-<?php 
-    session_start();
-    if(!isset($_SESSION['total_items'])){
-    $_SESSION['total_items']=null;
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +21,7 @@
             
         <div class="row"> 
                 <div class="col-lg-12 landmarks">
-                    <?php require_once('../php/template_landmarks.php'); ?>
+                    <div id="template_landmarks"></div>
                 </div>
                 
         </div>
@@ -40,8 +35,8 @@
                     
                     <div class="row" id="url_nav">
                         <ul class="breadcrumb">
-                            <li><a href="./home.php">Home</a></li>
-                            <li><a href="./sl_services_list.php">SL Services</a></li>
+                            <li><a href="./home.html">Home</a></li>
+                            <li><a href="./sl_services_list.html">SL Services</a></li>
                             <li class="active" id="sl_breadcrumb"></li>
                         </ul>
                     </div>

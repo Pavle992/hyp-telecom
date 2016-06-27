@@ -2,7 +2,7 @@
 
 	include "dbconnection.php";
 	include "Device1.php";
-
+	session_start();
 	class SmartLife{
 
 		var $id;

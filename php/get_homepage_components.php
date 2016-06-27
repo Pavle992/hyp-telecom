@@ -1,15 +1,12 @@
 <?php
-/*
- * Following code will list all the equipment
- */
 
-<<<<<<< HEAD
-	header("Access-Control-Allow-Origin: *");
-=======
-header("Access-Control-Allow-Origin: *");
->>>>>>> 465c4dde863f5aa7359f10d2532c1137f5a1ea62
 
-	// array for JSON response
+	
+
+header('Access-Control-Allow-Origin: *');
+session_start();
+// array for JSON response
+
 	$response = array();
 
 	$con= mysqli_connect("localhost","root","hyptelecom16","hyptelecom");

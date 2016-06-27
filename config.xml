@@ -13,11 +13,23 @@
         Blablablablaa 
     </description>
 
+    
+
     <platform name="android" />
 
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Milisko Pavlisko i Pera
     </author>
-    <access origin="*" subdomains="true" />
+
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+
+    <icon src="img/hyp_pikachu.png" />
+    
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+
+    <access origin="*" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
+   
 
 </widget>

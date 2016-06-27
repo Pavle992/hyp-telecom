@@ -90,7 +90,7 @@ $(document).ready(function(){
     var sl_service_container_item = ('<div class="col-sm-6 col-md-3">'
       +'<div class="thumbnail"><img class="sl-service-img img-responsive" src="..'+sl_service.image_path+'" alt="'+sl_service.name+'">'
       +'<div class="sl-service-name caption"><h4>'+sl_service.name+'</h4>'
-      +'<p><a href="../pages/sl_service.php?id='+sl_service.id+'" class="btn btn-primary" role="button">See Details</a></p></div></div></div>');
+      +'<p><a href="../pages/sl_service.html?id='+sl_service.id+'" class="btn btn-primary" role="button">See Details</a></p></div></div></div>');
     return sl_service_container_item;
 
   };

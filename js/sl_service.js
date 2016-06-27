@@ -42,9 +42,9 @@ $(document).ready(function(){
 		$(".linked_devices_description")
 	         .append("<div class='col-sm-6 col-md-3'>"
 	                +  "<div class='picture'>"
-	                +        "<img class='center-block device-img img-responsive' src='.."+data.image_path+"' alt='ImeUredjaja'/>"
+	                +        "<img class='center-block device-img img-responsive' src='.."+data.image_path+"' alt='"+data.name+"'/>"
 	                +        "<div class='sl-service-name caption'><h4>"+data.name+"</h4>"
-	                +           "<p><a href='./devices.php?id="+data.id+"' class='btn btn-primary' role='button'>See Details</a></p>"
+	                +           "<p><a href='./devices.html?id="+data.id+"' class='btn btn-primary' role='button'>See Details</a></p>"
 	                +         "</div>"
 	                +  "</div>"
 	                +"</div>");
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	    var price = $('.sl_service_price_text').text();
 
 	    $.ajax({
-	      url:'../php/add_to_cart.php',
+	      url:'http://hyp-telecom.ml/php/add_to_cart.php',
 	      method:'GET',
 	      contentType: "application/json; charset=UTF-8",
 	      data: {'name':name,
@@ -82,13 +82,13 @@ $(document).ready(function(){
 
 	}
 
-
+	$("#template_landmarks").load("../template_landmarks.html");
 	var url_params = (window.location.search.replace("?", "")).split("=");
 
     if (typeof loadContent !== 'undefined' && url_params.length === 2) {
 
         loadContent(
-            '../php/get_sl_service.php',
+            'http://hyp-telecom.ml/php/get_sl_service.php',
             'sl_service', $('#sl_service_container'), createSLServiceContainer, 
             {'id' : url_params[1] });
     }
