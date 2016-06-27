@@ -46,6 +46,12 @@ body {
     color: #33CC00;
 }
 
+.device-price-text{
+    color: rgb(0,128,255);
+    font-size: 25px;
+    font-family: 'Arial', arial;
+}
+
 #map_canvas{
   height: 100%;
 }

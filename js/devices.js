@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   var params = (window.location.search.replace("?", "")).split("=");
   $.ajax({
-    url:'../php/get_device_by_id.php',
+    url:'http://hyp-telecom.ml/php/get_device_by_id.php',
     method:'GET',
     contentType: "application/json; charset=UTF-8",
     data: {'id':params[1]},
@@ -42,7 +42,7 @@ $(document).ready(function(){
     var price = $('#device-container').find('.device-price-text').text();
 
     $.ajax({
-      url:'../php/add_to_cart.php',
+      url:'http://hyp-telecom.ml/php/add_to_cart.php',
       method:'GET',
       contentType: "application/json; charset=UTF-8",
       data: {'name':name,

@@ -1,6 +1,7 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
+session_start();
 
 $response=array();
 if(isset($_GET["id"])){

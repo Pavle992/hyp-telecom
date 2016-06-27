@@ -1,11 +1,7 @@
 
 <?php  
 
-require_once('../php/dbconnection.php');
- session_start();
-    if(!isset($_SESSION['total_items'])){
-    $_SESSION['total_items']=null;
-}
+
 
 if (isset($_GET['id'])) {
     $assistenceId = $_GET['id'];
@@ -47,6 +43,7 @@ if (isset($_GET['id'])) {
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
       <script src="../lib/js/jquery-2.2.4.min.js"></script>
+      <script src="../lib/js/jquery.session.js"></script>
       <script src="../js/assistence.js"></script>
   </head>
 
@@ -58,7 +55,7 @@ if (isset($_GET['id'])) {
 
     <div class="row"> 
             <div class="col-lg-12 landmarks">
-                <?php require_once('../php/template_landmarks.php'); ?>
+                <div id="template_landmarks"></div>
             </div>
             
     </div>
@@ -119,7 +116,7 @@ if (isset($_GET['id'])) {
                                             <img src="..' . $rowDevice['image_path'] .  '" class="device-image">
                                             <div class="text-center"><h4>' . $rowDevice['name'] . '</h4></div>
                                             <div class="text-center">
-                                            <form action="../pages/devices.php" methode="get">
+                                            <form action="../pages/devices.html" methode="get">
                                             <input type="hidden" name="id" value=' . $rowDevice['id'] . ' >
                                             <button class="btn btn-primary" type="submit">Details</button>
                                             </form>

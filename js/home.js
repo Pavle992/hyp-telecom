@@ -58,13 +58,13 @@ $(document).ready(function() {
 
     //apending template landmarks
 
-    $("#template_landmarks").load("../php/template_landmarks.html");
+    $("#template_landmarks").load("../template_landmarks.html");
 
     // load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     if (typeof loadContent !== 'undefined') {
         loadContent(
-            'http://hyptelecom16.altervista.org/php/get_homepage_components.php',
+            'http://hyp-telecom/php/get_homepage_components.php',
             'homepage', $('#homepage-container'), loadHomepageComponents);
     }
 

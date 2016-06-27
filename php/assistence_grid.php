@@ -1,7 +1,7 @@
 <?php
 
 require_once('dbconnection.php');
-
+session_start();
 
 
 class AssistenceGrid {

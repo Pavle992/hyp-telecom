@@ -11,7 +11,7 @@ $(document).ready(function(){
 		            +    '<div class="picture">'
 		            +      '<img class="center-block device-img img-responsive" src="..'+sl_service.image_path+'"/>'
 		            +       '<div class="sl-service-name caption"><h4>'+sl_service.name+'</h4>'
-		            +            '<p><a href="./sl_service.php?id='+sl_service.id+'" class="btn btn-primary" role="button">See Details</a></p>'
+		            +            '<p><a href="./sl_service.html?id='+sl_service.id+'" class="btn btn-primary" role="button">See Details</a></p>'
 		            +        '</div>'
 		            +    '</div>'
 		            +'</div>'
@@ -26,7 +26,7 @@ $(document).ready(function(){
     if (typeof loadContent !== 'undefined' && url_params.length === 2) {
         //Loading all SL Services of the Category
 		loadContent(
-            '../php/get_sl_services_by_category.php',
+            'http://hyp-telecom.ml/php/get_sl_services_by_category.php',
             'sl_services_cat', $('.linked_sl_services'), loadServicesOfCategory, 
             {'name' : url_params[1].replace(/%20/g, ' ') });
     }

@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 	}
 
-
+	$("#template_landmarks").load("../template_landmarks.html");
 	var url_params = (window.location.search.replace("?", "")).split("=");
 
     if (typeof loadContent !== 'undefined' && url_params.length === 2) {

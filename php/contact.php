@@ -1,7 +1,9 @@
 <?php 
 
 	include "dbconnection.php";
-
+	header("Access-Control-Allow-Origin: *");
+	session_start();
+	
 	if(isset($_REQUEST["name"]) && isset($_REQUEST["email"]) && isset($_REQUEST["message"])){
 		// echo "Device required: ".$_GET["id"];
 

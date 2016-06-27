@@ -5,7 +5,7 @@
  */
 
 header('Access-Control-Allow-Origin: *');
-
+session_start();
 // array for JSON response
 $response = array();
 
