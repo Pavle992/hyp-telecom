@@ -22,6 +22,8 @@
     </author>
 
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+
+    <icon src="img/hyp_pikachu.png" />
     
     <plugin name="cordova-plugin-whitelist" spec="1" />
 
