@@ -22,7 +22,7 @@ $(document).ready(function(){
 
     if (typeof loadContent !== 'undefined' && url_params.length === 2) {
         loadContent(
-            '../php/get_sl_service_category.php',
+            'http://hyp-telecom.ml/php/get_sl_service_category.php',
             'sl_service_category', $('#sl_service_category_container'), createSLServiceCategoryContainer, 
             {'name' : url_params[1].replace(/%20/g, ' ') });
     }
