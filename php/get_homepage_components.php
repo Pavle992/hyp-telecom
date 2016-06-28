@@ -7,6 +7,7 @@ header('Access-Control-Allow-Origin: *');
 session_start();
 // array for JSON response
 
+
 	$response = array();
 
 	$con= mysqli_connect("localhost","root","hyptelecom16","hyptelecom");
