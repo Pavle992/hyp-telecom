@@ -3,8 +3,7 @@ $(document).ready(function(){
 	function load_SL_Services(sl_services){
 
 			//changing landmark active element to SL SErvice
-			$(".active:first").removeClass('active');
-			$("#nav-smartlife").addClass("active");
+			
 
 			//Adding Jumbotron for each SL Service
 			var sl_service=$.parseJSON(sl_services);
@@ -27,7 +26,11 @@ $(document).ready(function(){
 
 	}
 
-	$("#template_landmarks").load("../template_landmarks.html");
+	$( "#template_landmarks" ).load( "../template_landmarks.html", function() {
+  				$(".active:first").removeClass('active');
+  				$("#nav-smartlife").addClass('active');
+			});
+	
 	// load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     if (typeof loadContent !== 'undefined') {

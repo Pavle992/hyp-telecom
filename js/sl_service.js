@@ -2,8 +2,7 @@ $(document).ready(function(){
 
 	function createSLServiceContainer(sl_service){
 
-		$(".active:first").removeClass('active');
-		$("#nav-smartlife").addClass("active");
+		
 
 
 		var slService=$.parseJSON(sl_service);
@@ -27,6 +26,8 @@ $(document).ready(function(){
 
 
 	}
+
+
 
 
 	function fillLinkedDevices(json_devices){
@@ -82,7 +83,12 @@ $(document).ready(function(){
 
 	}
 
-	$("#template_landmarks").load("../template_landmarks.html");
+	$( "#template_landmarks" ).load( "../template_landmarks.html", function() {
+  				$(".active:first").removeClass('active');
+  				$("#nav-smartlife").addClass('active');
+	});
+
+	
 	var url_params = (window.location.search.replace("?", "")).split("=");
 
     if (typeof loadContent !== 'undefined' && url_params.length === 2) {

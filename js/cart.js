@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-  $("#template_landmarks").load("../template_landmarks.html");
-
-  $(".active:first").removeClass('active');
-  $("#nav-cart").addClass('active');
+  $( "#template_landmarks" ).load( "../template_landmarks.html", function() {
+          $(".active:first").removeClass('active');
+          $("#nav-cart").addClass('active');
+      });
 
 
 function create_cart_item(item){

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-	// getDevices(1,1,1,1);
+	getDevices(1,1,1,1);
 	
 
 	// $("#template_landmarks").load("../template_landmarks.html");

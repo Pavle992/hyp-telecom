@@ -58,7 +58,7 @@ $(document).ready(function() {
 
     //apending template landmarks
 
-    $("#template_landmarks").load("../template_landmarks.html");
+   
 
     // load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
@@ -105,7 +105,10 @@ $(document).ready(function() {
 
       });
 
-
+      $( "#template_landmarks" ).load( "../template_landmarks.html", function() {
+          $(".active:first").removeClass('active');
+          $("#nav-home").addClass('active');
+      });
 
       //Adding styles
         $('head').append('<link href="../css/main.css" rel="stylesheet">');
