@@ -1,14 +1,21 @@
 $(document).ready(function(){
     
-	getDevices(1,1,1,1);
+	// getDevices(1,1,1,1);
+	
 
-	$("#template_landmarks").load("../template_landmarks.html");
+	// $("#template_landmarks").load("../template_landmarks.html");
 
-	$(".active:first").removeClass('active');
-  	$("#nav-devices").addClass('active');
 
-	$("ul#page-header li:nth-child(2)").attr('class', 'active');
-	$("ul#page-header li:nth-child(1)").removeClass('active');
+	$( "#template_landmarks" ).load( "../template_landmarks.html", function() {
+  		$(".active:first").removeClass('active');
+  		$("#nav-devices").addClass('active');
+	});
+
+	// $(".active:first").removeClass('active');
+ //  $("#nav-devices").addClass('active');
+ 	
+	// $("#nav-devices").attr('class', 'active');
+	// $("#nav-home").removeClass('active');
 
 });
 

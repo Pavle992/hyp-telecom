@@ -1,10 +1,10 @@
 $(document).ready(function(){
    
 
-	$("#template_landmarks").load("../template_landmarks.html");
-
-  	$(".active:first").removeClass('active');
-  	$("#nav-assistence").addClass('active');
+	$( "#template_landmarks" ).load( "../template_landmarks.html", function() {
+      $(".active:first").removeClass('active');
+      $("#nav-assistence").addClass('active');
+  });
 
 
   var params = (window.location.search.replace("?", "")).split("=");

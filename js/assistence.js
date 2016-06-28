@@ -2,13 +2,10 @@ $(document).ready(function(){
     
 	getAssistence(1,1,1,1,0);
 
-	$("#template_landmarks").load("../template_landmarks.html");
-
-	$(".active:first").removeClass('active');
-  	$("#nav-assistence").addClass('active');
-
-	$("ul#page-header li:nth-child(4)").attr('class', 'active');
-	$("ul#page-header li:nth-child(1)").removeClass('active');
+	$( "#template_landmarks" ).load( "../template_landmarks.html", function() {
+  		$(".active:first").removeClass('active');
+  		$("#nav-assistence").addClass('active');
+	});
 
 });
 
