@@ -1,4 +1,5 @@
 <?php
+ header("Access-Control-Allow-Origin: *");
  require('./dbconnection.php');
  $db = new MySql();
  $db->connect();

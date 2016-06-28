@@ -1,5 +1,5 @@
 <?php 
-	
+	header("Access-Control-Allow-Origin: *");
 	require('./dbconnection.php');
 
 	if (isset($_GET['id'])) {

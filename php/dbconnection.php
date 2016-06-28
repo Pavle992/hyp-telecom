@@ -18,7 +18,7 @@ class MySql {
 		$this->username = "root";
 		$this->password = "hyptelecom16";
 		
-		$this->hostname = "192.81.223.115";
+		$this->hostname = "localhost";
 		//$this->port = 3306;
 		
 	}
