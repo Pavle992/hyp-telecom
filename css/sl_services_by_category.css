@@ -32,3 +32,35 @@ ul.breadcrumb{
 	text-align: center;
 
 }
+
+/*Jumbotron Font responsive*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 200px) {
+    .jumbotron h2 {
+        font-size: 1.8em;
+    }
+    .jumbotron h4 {
+        font-size: 1.1em;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 600px) {
+    .jumbotron h2 {
+        font-size: 2.4em;
+    }
+    .jumbotron h4 {
+        font-size: 1.4em;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 992px) {
+    .jumbotron h2 {
+        font-size: 3em;
+    }
+    .jumbotron h4 {
+        font-size: 1.5em;
+    }
+}

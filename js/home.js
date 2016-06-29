@@ -135,6 +135,7 @@ $(document).ready(function() {
         //CAROUSEL RESPONSIVNESS
         $('.carousel .carousel-caption').css('zoom', $('.carousel').width()/1250);
 
+        //ON WINDOW RESIZE
         $(window).resize(function() {
           $('.carousel .carousel-caption').css('zoom', $('.carousel').width()/1250);
         });

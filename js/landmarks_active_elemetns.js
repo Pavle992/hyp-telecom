@@ -1,12 +1,13 @@
 $(document).ready(function(){
 
   //landmarks page acrtive elments change
-      $("#nav-who-we-are").on('click',function(){
+      $("#template_landmarks").on('click','#nav-who-we-are',function(){
 
         $(".active:first").removeClass('active');
         $("#nav-who-we-are").addClass("active");
 
       });
+
       $("#nav-group").on('click',function(){
 
         $(".active:first").removeClass('active');

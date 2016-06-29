@@ -6,7 +6,7 @@
     margin-right : 10%;
     border-radius: 5px;
     display      : inline-block;
-    font-weight  : 700 !important;
+    font-weight  : 800 !important;
     font-family  : 'Libre Baskerville', serif;
     text-shadow  : 2px 2px 2px rgba(50, 50, 50, .8);
 }
@@ -52,19 +52,7 @@
 .carousel .container h1,
 .carousel .container h2 {
     font-weight: 700 !important;
-
-.container {
-    width        : auto;
-    padding      : 3%;
-    color        : #f8f8f8;
-    text-align   : left;
-    margin-right : 10%;
-    border-radius: 5px;
-    display      : inline-block;
-    font-weight  : 700 !important;
-    font-family  : 'Libre Baskerville', serif;
-
-}
+  }
 
 .container h1,
 .container h2 {
@@ -76,5 +64,7 @@
    margin-right:auto;
    display:center;
 }
+
+
 
 
