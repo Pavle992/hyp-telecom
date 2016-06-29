@@ -1,6 +1,12 @@
 $(document).ready(function() {
 
+
+    $.session.set("tab","h");
+
+
     $.support.cors = true;
+
+
     function loadHomepageComponents(homepage) { 
 
         $('.the_group_info').html(homepage.group_desc);
@@ -105,9 +111,37 @@ $(document).ready(function() {
 
       });
 
+      
+      //we use checkLocalStorage function to check if we navigated from other pages
+      // to specific section in home page 
+
+      function checkLocalStorage(){
+
+        switch(localStorage.getItem("tab")){
+
+          case 'w': 
+                    $(".active:first").removeClass('active');
+                    $("#nav-who-we-are").addClass("active");
+                    break;
+          case 'g': $(".active:first").removeClass('active');
+                    $("#nav-group").addClass("active");
+                    break;
+          case 'c': $(".active:first").removeClass('active');
+                    $("#nav-contact").addClass("active");
+                    break;
+          default:  $(".active:first").removeClass('active');
+                    $("#nav-home").addClass("active");
+                    localStorage.setItem("tab",'h');
+                    break;
+        }
+
+      }
+
+      //loading template with data about cart items if any
+
       $( "#template_landmarks" ).load( "../template_landmarks.html", function() {
-          $(".active:first").removeClass('active');
-          $("#nav-home").addClass('active');
+          // $(".active:first").removeClass('active');
+          // $("#nav-home").addClass('active');
           $.ajax({
               url:'http://hyp-telecom.ml/php/get_cart_total_items.php',
               method:'GET',
@@ -118,6 +152,7 @@ $(document).ready(function() {
                     console.log(data);
                     var total_items = data;
                     $('#cart-icon').text(total_items); //put the total num of items in cart
+
                     },
               error: function(requestObject, error, errorThrown) {
                     console.log("Error: "+errorThrown);
@@ -125,10 +160,12 @@ $(document).ready(function() {
                           $('<p>Please check your internet connection</p>').addClass('error-msg'));
             }
           });
+
+          checkLocalStorage();
+          
       });
 
       //Adding styles
-        $('head').append('<link href="../css/main.css" rel="stylesheet">');
         $('head').append('<link href="../css/main.css" rel="stylesheet">');
 
 

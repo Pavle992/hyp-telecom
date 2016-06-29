@@ -8,8 +8,8 @@ $(document).ready(function(){
 
 function create_cart_item(item){
 
-    var cart_item = ('<tr class="cart_item-'+item.id+'"><td class="col col-md-4"><a href="'+item.path+'" class="thumbnail">'+
-      '<img class="item-img img-responsive" src="'+item.path+'" alt="'+item.name+'"></a></td>'+
+    var cart_item = ('<tr class="cart_item-'+item.id+'"><td class="col col-md-4">'+
+      '<img class="item-img img-responsive" src="'+item.path+'" alt="'+item.name+'"></td>'+
       '<td class="col col-md-4">'+item.name+'</td>'+
       '<td class="col col-md-2">'+item.price+'</td>'+
       '<td class="col col-md-2"><button type="button" id="remove-item-'+item.id+'" class="btn btn-default btn-sm">'+
