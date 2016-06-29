@@ -31,5 +31,25 @@ $(document).ready(function(){
 
       });
 
+      $("#template_landmarks").on('click','#nav-home',function(){
+
+        $(".active:first").removeClass('active');
+        $("#nav-home").addClass("active");
+
+        //setting session for nav-contact-tab
+        localStorage.setItem("tab",'h');
+
+      });
+
+      $("#template_landmarks").on('click','.nav-brand',function(){
+
+        $(".active:first").removeClass('active');
+        $("#nav-home").addClass("active");
+
+        //setting session for nav-contact-tab
+        localStorage.setItem("tab",'h');
+
+      });
+
 
 });
