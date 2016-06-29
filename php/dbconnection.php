@@ -16,7 +16,7 @@ class MySql {
 	function __construct(){
 		$this->database = "hyptelecom";
 		$this->username = "root";
-		$this->password = "";
+		$this->password = "hyptelecom16";
 		
 		$this->hostname = "localhost";
 		//$this->port = 3306;
